@@ -1,0 +1,11 @@
+{
+  "metrics": {
+    "ACC": 376.0,
+    "BWT": 0.0,
+    "Forgetting": 0.0
+  },
+  "strategy": "tsn_improved_reuse",
+  "model_signature": "dm128_L3_H4_K20_drop0.10",
+  "tsn_reuse_score_mode": "latent",
+  "tsn_reuse_signature": "rsm-latent_lthr35"
+}

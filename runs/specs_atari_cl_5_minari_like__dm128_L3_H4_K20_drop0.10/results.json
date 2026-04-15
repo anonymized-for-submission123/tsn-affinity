@@ -1,0 +1,114 @@
+{
+  "name": "DT-tsn:configs/specs_atari_cl_5_minari_like.json",
+  "task_names": [
+    "A_Alien",
+    "B_Atlantis",
+    "C_Boxing",
+    "D_Breakout",
+    "E_Centipede"
+  ],
+  "perf_matrix": [
+    [
+      55.0,
+      4.0,
+      11.0,
+      5.0,
+      99.0
+    ],
+    [
+      31.0,
+      1527.0,
+      -2.0,
+      1.0,
+      65.0
+    ],
+    [
+      37.0,
+      1480.0,
+      90.0,
+      0.0,
+      117.0
+    ],
+    [
+      16.0,
+      44.0,
+      34.0,
+      31.0,
+      36.0
+    ],
+    [
+      27.0,
+      62.0,
+      33.0,
+      0.0,
+      130.0
+    ]
+  ],
+  "model": {
+    "class": "DecisionTransformer",
+    "obs_shape": [
+      4,
+      84,
+      84
+    ],
+    "n_actions": 18,
+    "seq_len": 20,
+    "d_model": 128,
+    "n_layers": 3,
+    "n_heads": 4,
+    "p_drop": 0.1,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "max_ep_len_requested": 10000,
+    "max_ep_len_effective": 27001,
+    "rtg_scale_requested": 1000.0,
+    "rtg_scale_effective": 1556.0,
+    "num_parameters_total": 5638372,
+    "num_parameters_trainable": 5638372,
+    "dt_cfg": {
+      "n_layer": 3,
+      "n_head": 4,
+      "n_embd": 128,
+      "dropout": 0.1,
+      "bias": false,
+      "K": 20,
+      "max_ep_len": 27001,
+      "state_dim": 128,
+      "act_discrete": true,
+      "act_vocab_size": 18,
+      "act_dim": 1,
+      "act_tanh": false,
+      "tanh_embeddings": false
+    }
+  },
+  "metrics": {
+    "ACC": 50.400001525878906,
+    "BWT": -395.25,
+    "Forgetting": 395.25
+  },
+  "atari_env": "minari_like",
+  "max_steps": 27000,
+  "steps_per_task": 20000,
+  "episodes_eval": 20,
+  "batch_size": 64,
+  "target_mode": "max",
+  "target_return_override": null,
+  "mix": 0.5,
+  "replay_check": true,
+  "auto_fire": false,
+  "auto_fire_on_life_loss": false,
+  "dqn_size": 84,
+  "tsn_keep_ratio": 0.5,
+  "tsn_keep_schedule": "equal_remaining",
+  "tsn_min_keep_ratio": 0.001,
+  "tsn_grad_clip": 1.0,
+  "tsn_quant_clusters": 16,
+  "tsn_quantize_after_task": false,
+  "tsn_allow_weight_reuse": false,
+  "tsn_include_embeddings": true,
+  "tsn_freeze_non_mask_params_after_first": false,
+  "tsn_skip_module_names": [
+    "dt.te"
+  ]
+}

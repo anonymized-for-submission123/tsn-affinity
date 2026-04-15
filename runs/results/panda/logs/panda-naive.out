@@ -1,0 +1,91 @@
+x1002c6s5b1n0
+x1002c6s5b1n0
+x1002c6s5b1n0
+x1002c6s5b1n0
+x1002c6s5b1n0
+x1002c6s5b1n0
+x1002c6s5b1n0
+x1002c6s5b1n0
+ GCCcore/13.2.0 loaded.
+ zlib/1.2.13 loaded.
+ binutils/2.40 loaded.
+ bzip2/1.0.8 loaded.
+ ncurses/6.4 loaded.
+ libreadline/8.2 loaded.
+ Tcl/8.6.13 loaded.
+ SQLite/3.43.1 loaded.
+ XZ/5.4.4 loaded.
+ libffi/3.4.4 loaded.
+ OpenSSL/1.1 loaded.
+ Python/3.11.5 loaded.
+pybullet build time: Jan 27 2026 10:50:49
+[device] cuda
+
+=== Loading Panda tasks ===
+[TASK] PandaReach | env=PandaReachDense-v3 | data=/net/scratch/hscra/plgrid/plgdomin088/datasets/panda_expert/panda_reach_dense_1m_expert.pkl
+  use_time_feature=True
+  dataset obs shape: (3, 13), actions shape: (3, 3)
+  env obs_space: Dict('achieved_goal': Box(-10.0, 10.0, (3,), float32), 'desired_goal': Box(-10.0, 10.0, (3,), float32), 'observation': Box([-10. -10. -10. -10. -10. -10.   0.], [10. 10. 10. 10. 10. 10.  1.], (7,), float32)), act_space: Box(-1.0, 1.0, (3,), float32)
+  dataset episodes=370669 | return mean=-0.208 min=-0.633 max=-0.000
+[TASK] PandaPush | env=PandaPushDense-v3 | data=/net/scratch/hscra/plgrid/plgdomin088/datasets/panda_expert/panda_push_dense_1m_expert.pkl
+  use_time_feature=True
+  dataset obs shape: (6, 25), actions shape: (6, 3)
+  env obs_space: Dict('achieved_goal': Box(-10.0, 10.0, (3,), float32), 'desired_goal': Box(-10.0, 10.0, (3,), float32), 'observation': Box([-10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10.
+ -10. -10. -10. -10.   0.], [10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10.
+  1.], (19,), float32)), act_space: Box(-1.0, 1.0, (3,), float32)
+  dataset episodes=141668 | return mean=-0.937 min=-33.158 max=-0.001
+[TASK] PandaPickAndPlace | env=PandaPickAndPlaceDense-v3 | data=/net/scratch/hscra/plgrid/plgdomin088/datasets/panda_expert/panda_pick_and_place_dense_1m_expert.pkl
+  use_time_feature=True
+  dataset obs shape: (6, 26), actions shape: (6, 4)
+  env obs_space: Dict('achieved_goal': Box(-10.0, 10.0, (3,), float32), 'desired_goal': Box(-10.0, 10.0, (3,), float32), 'observation': Box([-10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10.
+ -10. -10. -10. -10. -10.   0.], [10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10.
+ 10.  1.], (20,), float32)), act_space: Box(-1.0, 1.0, (4,), float32)
+  dataset episodes=119353 | return mean=-1.298 min=-57.910 max=-0.001
+[lens] PandaReach: max_len=5 -> timestep_clip_max=4
+[lens] PandaPush: max_len=50 -> timestep_clip_max=49
+[lens] PandaPickAndPlace: max_len=50 -> timestep_clip_max=49
+
+[global dims] obs_dim=26 (per-task=[13, 25, 26]), act_dim=4 (per-task=[3, 3, 4])
+[target] PandaReach: target_return=-0.000320 (hardcoded)
+[target] PandaPush: target_return=-0.436000 (hardcoded)
+[target] PandaPickAndPlace: target_return=-0.001000 (hardcoded)
+
+[run_dir] /net/home/plgrid/plgdomin088/runs/20260311-141638/panda/naive/panda3
+[tasks] ['PandaReach', 'PandaPush', 'PandaPickAndPlace']
+DTBackbone config: DTConfig(n_layer=3, n_head=1, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=50, state_dim=128, act_discrete=False, act_vocab_size=1, act_dim=4, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 0.61M
+
+[Task 1/3] Train on PandaReach
+[eval] after task 1 on PandaReach: -0.189 (target=-0.000320)
+[eval] after task 1 on PandaPush: -7.790 (target=-0.436000)
+[eval] after task 1 on PandaPickAndPlace: -9.576 (target=-0.001000)
+
+[Task 2/3] Train on PandaPush
+[eval] after task 2 on PandaReach: -21.078 (target=-0.000320)
+[eval] after task 2 on PandaPush: -0.954 (target=-0.436000)
+[eval] after task 2 on PandaPickAndPlace: -9.892 (target=-0.001000)
+
+[Task 3/3] Train on PandaPickAndPlace
+[eval] after task 3 on PandaReach: -10.902 (target=-0.000320)
+[eval] after task 3 on PandaPush: -8.195 (target=-0.436000)
+[eval] after task 3 on PandaPickAndPlace: -1.311 (target=-0.001000)
+
+Done. Saved Panda CL results to: /net/home/plgrid/plgdomin088/runs/20260311-141638/panda/naive/panda3
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886

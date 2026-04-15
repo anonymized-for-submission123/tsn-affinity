@@ -1,0 +1,6 @@
+step,task_name,acc_i,bwt_i,forgetting_i,diag,mean_seen
+1,D_Breakout,97.0,0.0,0.0,97.0,97.0
+2,A_Alien,85.0,0.0,0.0,73.0,85.0
+3,B_Atlantis,557.0,0.0,0.0,1501.0,557.0
+4,C_Boxing,442.0,0.0,0.0,97.0,442.0
+5,E_Centipede,371.6000061035156,0.0,0.0,90.0,371.6000061035156

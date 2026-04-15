@@ -1,0 +1,229 @@
+{
+  "name": "DT-tsn_origin_reuse:panda3",
+  "task_names": [
+    "PandaReach",
+    "PandaPush",
+    "PandaPickAndPlace"
+  ],
+  "perf_matrix": [
+    [
+      -0.1889386773109436,
+      -7.7551093101501465,
+      -9.803488731384277
+    ],
+    [
+      -7.865035057067871,
+      -1.0266547203063965,
+      -9.741012573242188
+    ],
+    [
+      -7.865035057067871,
+      -1.0262538194656372,
+      -2.060509204864502
+    ]
+  ],
+  "metrics": {
+    "ACC": -3.650599241256714,
+    "BWT": -3.8378477096557617,
+    "Forgetting": 3.838048219680786
+  },
+  "model": {
+    "signature": "dm128_L3_H1_K20_drop0.10",
+    "class": "PandaDecisionTransformer",
+    "obs_shape": [
+      26
+    ],
+    "obs_dim_global": 26,
+    "act_dim_global": 4,
+    "seq_len": 20,
+    "d_model_requested": 128,
+    "n_layers_requested": 3,
+    "n_heads_requested": 1,
+    "p_drop_requested": 0.1,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.25,
+    "max_ep_len_requested": 50,
+    "max_ep_len_effective": 50,
+    "rtg_scale_requested": 1000.0,
+    "rtg_scale_effective": 1000.0,
+    "num_parameters_total": 1229320,
+    "num_parameters_trainable": 1229320,
+    "num_model_copies": 2,
+    "num_parameters_all_copies_total": 2458640,
+    "dt_cfg": {
+      "n_layer": 3,
+      "n_head": 1,
+      "n_embd": 128,
+      "dropout": 0.1,
+      "bias": false,
+      "K": 20,
+      "max_ep_len": 50,
+      "state_dim": 128,
+      "act_discrete": false,
+      "act_vocab_size": 1,
+      "act_dim": 4,
+      "act_tanh": false,
+      "tanh_embeddings": false
+    }
+  },
+  "tasks": [
+    {
+      "name": "PandaReach",
+      "env_id": "PandaReachDense-v3",
+      "dataset": "/net/tscratch/people/plgdomin088/datasets/panda_expert/panda_reach_dense_1m_expert.pkl",
+      "use_time_feature": true,
+      "dataset_episodes": 370669,
+      "dataset_obs_dim": 13,
+      "dataset_act_dim": 3,
+      "dataset_return_mean": -0.20760157704353333,
+      "dataset_return_min": -0.6327803134918213,
+      "dataset_return_max": -0.0003201928047928959,
+      "max_len": 5,
+      "timestep_clip_max": 4,
+      "target_return": -0.00032,
+      "target_return_source": "hardcoded",
+      "active_action_dim_mask": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "PandaPush",
+      "env_id": "PandaPushDense-v3",
+      "dataset": "/net/tscratch/people/plgdomin088/datasets/panda_expert/panda_push_dense_1m_expert.pkl",
+      "use_time_feature": true,
+      "dataset_episodes": 141668,
+      "dataset_obs_dim": 25,
+      "dataset_act_dim": 3,
+      "dataset_return_mean": -0.9369212985038757,
+      "dataset_return_min": -33.15809631347656,
+      "dataset_return_max": -0.0006047760834917426,
+      "max_len": 50,
+      "timestep_clip_max": 49,
+      "target_return": -0.436,
+      "target_return_source": "hardcoded",
+      "active_action_dim_mask": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "PandaPickAndPlace",
+      "env_id": "PandaPickAndPlaceDense-v3",
+      "dataset": "/net/tscratch/people/plgdomin088/datasets/panda_expert/panda_pick_and_place_dense_1m_expert.pkl",
+      "use_time_feature": true,
+      "dataset_episodes": 119353,
+      "dataset_obs_dim": 26,
+      "dataset_act_dim": 4,
+      "dataset_return_mean": -1.2983518838882446,
+      "dataset_return_min": -57.910438537597656,
+      "dataset_return_max": -0.0009701567469164729,
+      "max_len": 50,
+      "timestep_clip_max": 49,
+      "target_return": -0.001,
+      "target_return_source": "hardcoded",
+      "active_action_dim_mask": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "task_order": [
+    "PandaReach",
+    "PandaPush",
+    "PandaPickAndPlace"
+  ],
+  "obs_dim_global": 26,
+  "act_dim_global": 4,
+  "target_return_map": {
+    "PandaReach": -0.00032,
+    "PandaPush": -0.436,
+    "PandaPickAndPlace": -0.001
+  },
+  "seed": 0,
+  "strategy": "tsn_origin_reuse",
+  "seq_len": 20,
+  "steps_per_task": 1000000,
+  "episodes_eval": 20,
+  "max_steps": 50,
+  "batch_size": 128,
+  "mix": 0.5,
+  "rehearsal_capacity": 5000,
+  "target_mode": "max",
+  "target_return_override": null,
+  "d_model": 128,
+  "n_layers": 3,
+  "n_heads": 1,
+  "p_drop": 0.1,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "grad_clip": 0.25,
+  "max_ep_len": 50,
+  "rtg_scale": 1000.0,
+  "ewc_lambda": null,
+  "fisher_n_batches": null,
+  "fisher_batch_size": null,
+  "si_lambda": null,
+  "si_epsilon": null,
+  "si_omega_max": null,
+  "si_clamp_min0": null,
+  "si_debug_every": null,
+  "tsn_keep_ratio": 0.33,
+  "tsn_quant_clusters": 16,
+  "tsn_include_embeddings": false,
+  "tsn_allow_weight_reuse": null,
+  "tsn_quantize_after_task": false,
+  "tsn_freeze_non_mask_params_after_first": false,
+  "tsn_store_task_obs_stats": true,
+  "tsn_patch_model_act": true,
+  "tsn_reuse_memory_size": 256,
+  "tsn_reuse_kl_threshold": 0.25,
+  "tsn_max_model_copies": null,
+  "tsn_task_to_copy": {
+    "0": 0,
+    "1": 0,
+    "2": 1
+  },
+  "tsn_task_similarity": {
+    "0": {
+      "source_task": null,
+      "copy_id": 0,
+      "best_kl": null,
+      "created_new_copy": false
+    },
+    "1": {
+      "source_task": 0,
+      "copy_id": 0,
+      "best_kl": 0.15711325407028198,
+      "created_new_copy": false
+    },
+    "2": {
+      "source_task": 0,
+      "copy_id": 1,
+      "best_kl": 0.5187362432479858,
+      "created_new_copy": true
+    }
+  },
+  "tsn_reuse_score_mode": null,
+  "tsn_routing_n_batches": null,
+  "tsn_routing_batch_size": null,
+  "tsn_action_reuse_threshold": null,
+  "tsn_latent_reuse_threshold": null,
+  "tsn_hybrid_reuse_threshold": null,
+  "tsn_hybrid_alpha": null,
+  "tsn_normalize_similarity_scores": null,
+  "tsn_warmstart_source_scores": null,
+  "tsn_warmstart_strength": null,
+  "tsn_warmstart_noise_std": null,
+  "tsn_warmstart_on_new_copy": null,
+  "tsn_reuse_signature": "rsm-old_mem256_kl0.25_mcinf",
+  "num_model_copies": 2,
+  "num_parameters_all_copies_total": 2458640
+}

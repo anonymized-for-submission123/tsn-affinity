@@ -1,0 +1,8 @@
+{
+  "metrics": {
+    "ACC": 50.400001525878906,
+    "BWT": -395.25,
+    "Forgetting": 395.25
+  },
+  "strategy": "tsn"
+}

@@ -1,0 +1,55 @@
+{
+  "mode": "single-task-atari",
+  "spec": "configs/specs_atari_breakout_minari_like.json",
+  "tasks_ran": [
+    "D_Breakout"
+  ],
+  "scores": {
+    "D_Breakout": 42.0
+  },
+  "avg_score": 42.0,
+  "seed_override": null,
+  "seed_offset": 0,
+  "task_records": [
+    {
+      "task": "D_Breakout",
+      "env_id": "ALE/Breakout-v5",
+      "dataset_path": "/net/tscratch/people/plgdomin088/datasets/atari_expert/D_Breakout/expert_minari_dqn.npz",
+      "base_seed": 3,
+      "effective_seed": 3,
+      "score": 42.0,
+      "target_return": 114.0,
+      "target_mode": "max",
+      "rtg_scale": 114.0,
+      "episodes_eval": 100,
+      "steps": 20000,
+      "batch_size": 64,
+      "seq_len": 20,
+      "max_ep_len_eval": 27000,
+      "d_model": 128,
+      "n_layers": 3,
+      "n_heads": 4,
+      "p_drop": 0.1,
+      "lr": 0.0003,
+      "weight_decay": 0.0001,
+      "frame_stack": 4,
+      "clip_rewards": true,
+      "auto_fire": false,
+      "auto_fire_on_life_loss": true
+    }
+  ],
+  "device": "cuda",
+  "steps": 20000,
+  "batch_size": 64,
+  "seq_len": 20,
+  "max_ep_len": 27000,
+  "episodes_eval": 100,
+  "target_mode": "max",
+  "target_return_override": null,
+  "d_model": 128,
+  "n_layers": 3,
+  "n_heads": 4,
+  "p_drop": 0.1,
+  "dataset_root": "/net/tscratch/people/plgdomin088/datasets/atari_expert",
+  "dataset_file": "expert_minari_dqn.npz"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "DT-cumulative:panda3",
+  "task_names": [
+    "PandaReach",
+    "PandaPush",
+    "PandaPickAndPlace"
+  ],
+  "perf_matrix": [
+    [
+      -0.1891648769378662,
+      -7.790419101715088,
+      -9.57553482055664
+    ],
+    [
+      -0.1878555417060852,
+      -0.980198085308075,
+      -9.579604148864746
+    ],
+    [
+      -0.1888040006160736,
+      -1.1197701692581177,
+      -1.3142513036727905
+    ]
+  ],
+  "metrics": {
+    "ACC": -0.8742752075195312,
+    "BWT": -0.06960560381412506,
+    "Forgetting": 0.07026027143001556
+  },
+  "obs_dim_global": 26,
+  "act_dim_global": 4,
+  "target_return_map": {
+    "PandaReach": -0.00032,
+    "PandaPush": -0.436,
+    "PandaPickAndPlace": -0.001
+  },
+  "seed": 0,
+  "strategy": "cumulative",
+  "seq_len": 20,
+  "steps_per_task": 1000000,
+  "episodes_eval": 20,
+  "max_steps": 50,
+  "batch_size": 128,
+  "mix": 0.5,
+  "rehearsal_capacity": 5000,
+  "n_heads": 1,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "grad_clip": 0.25,
+  "max_ep_len": 50,
+  "rtg_scale": 1000.0
+}

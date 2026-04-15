@@ -1,0 +1,52 @@
+{
+  "name": "DT-naive:panda3",
+  "task_names": [
+    "PandaReach",
+    "PandaPush",
+    "PandaPickAndPlace"
+  ],
+  "perf_matrix": [
+    [
+      -0.1891648769378662,
+      -7.790419101715088,
+      -9.57553482055664
+    ],
+    [
+      -21.07845115661621,
+      -0.9541562795639038,
+      -9.892359733581543
+    ],
+    [
+      -10.90204906463623,
+      -8.194924354553223,
+      -1.3105556964874268
+    ]
+  ],
+  "metrics": {
+    "ACC": -6.802509784698486,
+    "BWT": -8.976825714111328,
+    "Forgetting": 8.976825714111328
+  },
+  "obs_dim_global": 26,
+  "act_dim_global": 4,
+  "target_return_map": {
+    "PandaReach": -0.00032,
+    "PandaPush": -0.436,
+    "PandaPickAndPlace": -0.001
+  },
+  "seed": 0,
+  "strategy": "naive",
+  "seq_len": 20,
+  "steps_per_task": 1000000,
+  "episodes_eval": 20,
+  "max_steps": 50,
+  "batch_size": 128,
+  "mix": 0.5,
+  "rehearsal_capacity": 5000,
+  "n_heads": 1,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "grad_clip": 0.25,
+  "max_ep_len": 50,
+  "rtg_scale": 1000.0
+}

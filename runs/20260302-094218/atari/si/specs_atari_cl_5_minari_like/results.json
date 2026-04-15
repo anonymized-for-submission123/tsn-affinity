@@ -1,0 +1,55 @@
+{
+  "name": "DT-si:configs/specs_atari_cl_5_minari_like.json",
+  "task_names": [
+    "A_Alien",
+    "B_Atlantis",
+    "C_Boxing",
+    "D_Breakout",
+    "E_Centipede"
+  ],
+  "perf_matrix": [
+    [
+      37.0,
+      15.0,
+      -2.0,
+      2.0,
+      61.0
+    ],
+    [
+      7.0,
+      1482.0,
+      4.0,
+      2.0,
+      65.0
+    ],
+    [
+      36.0,
+      58.0,
+      90.0,
+      6.0,
+      58.0
+    ],
+    [
+      3.0,
+      40.0,
+      9.0,
+      11.0,
+      54.0
+    ],
+    [
+      19.0,
+      20.0,
+      -8.0,
+      2.0,
+      117.0
+    ]
+  ],
+  "metrics": {
+    "ACC": 30.0,
+    "BWT": -396.75,
+    "Forgetting": 396.75
+  },
+  "atari_env": "minari_like",
+  "max_steps": 27000,
+  "steps_per_task": 20000
+}

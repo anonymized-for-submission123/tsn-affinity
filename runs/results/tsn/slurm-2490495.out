@@ -1,0 +1,113 @@
+t0019
+t0019
+t0019
+t0019
+t0019
+t0019
+t0019
+t0019
+ GCCcore/13.2.0 loaded.
+ zlib/1.2.13 loaded.
+ binutils/2.40 loaded.
+ bzip2/1.0.8 loaded.
+ ncurses/6.4 loaded.
+ libreadline/8.2 loaded.
+ Tcl/8.6.13 loaded.
+ SQLite/3.43.1 loaded.
+ XZ/5.4.4 loaded.
+ libffi/3.4.4 loaded.
+ OpenSSL/1.1 loaded.
+ Python/3.11.5 loaded.
+A.L.E: Arcade Learning Environment (version 0.11.2+ecc1138)
+[Powered by Stella]
+A_Alien: env=EnvSpec(id='ALE/Alien-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'alien', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Alien', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.5176470875740051)
+B_Atlantis: env=EnvSpec(id='ALE/Atlantis-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'atlantis', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Atlantis', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.7372549176216125)
+C_Boxing: env=EnvSpec(id='ALE/Boxing-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'boxing', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Boxing', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.8392156958580017)
+D_Breakout: env=EnvSpec(id='ALE/Breakout-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'breakout', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Breakout', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.5803921818733215)
+E_Centipede: env=EnvSpec(id='ALE/Centipede-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'centipede', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Centipede', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.6627451181411743)
+[run_dir] runs/20260326-095409/atari/tsn/specs_atari_cl_5_minari_like__dm128_L3_H4_K20_drop0.10
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=10000, state_dim=128, act_discrete=True, act_vocab_size=18, act_dim=1, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 1.89M
+[mode] Using OFFLINE expert trajectories from: /net/tscratch/people/plgdomin088/datasets/atari_expert
+[offline] loading trajectories for task 'A_Alien' from /net/tscratch/people/plgdomin088/datasets/atari_expert/A_Alien/expert_minari_dqn.npz
+[offline] task=A_Alien, episodes=10, avg_return=60.6, min=40.0, max=86.0
+[offline] target_return[A_Alien] = 86.00 (mode=max)
+[replay-check] A_Alien: dataset_ep0=79.000 env_ep0=79.000 diff=0.000 ok=True
+[offline] loading trajectories for task 'B_Atlantis' from /net/tscratch/people/plgdomin088/datasets/atari_expert/B_Atlantis/expert_minari_dqn.npz
+[offline] task=B_Atlantis, episodes=10, avg_return=1550.0, min=1543.0, max=1556.0
+[offline] target_return[B_Atlantis] = 1556.00 (mode=max)
+[replay-check] B_Atlantis: dataset_ep0=1546.000 env_ep0=1546.000 diff=0.000 ok=True
+[offline] loading trajectories for task 'C_Boxing' from /net/tscratch/people/plgdomin088/datasets/atari_expert/C_Boxing/expert_minari_dqn.npz
+[offline] task=C_Boxing, episodes=10, avg_return=92.0, min=86.0, max=97.0
+[offline] target_return[C_Boxing] = 97.00 (mode=max)
+[replay-check] C_Boxing: dataset_ep0=90.000 env_ep0=90.000 diff=0.000 ok=True
+[offline] loading trajectories for task 'D_Breakout' from /net/tscratch/people/plgdomin088/datasets/atari_expert/D_Breakout/expert_minari_dqn.npz
+[offline] task=D_Breakout, episodes=10, avg_return=91.5, min=35.0, max=114.0
+[offline] target_return[D_Breakout] = 114.00 (mode=max)
+[replay-check] D_Breakout: dataset_ep0=97.000 env_ep0=97.000 diff=0.000 ok=True
+[offline] loading trajectories for task 'E_Centipede' from /net/tscratch/people/plgdomin088/datasets/atari_expert/E_Centipede/expert_minari_dqn.npz
+[offline] task=E_Centipede, episodes=10, avg_return=115.9, min=90.0, max=135.0
+[offline] target_return[E_Centipede] = 135.00 (mode=max)
+[replay-check] E_Centipede: dataset_ep0=117.000 env_ep0=117.000 diff=0.000 ok=True
+[patch] set model.rtg_scale = 1556.000
+[patch] expanded time-embedding: 10000 -> 27001
+[patch] rebuilt optimizer after time-embedding expansion
+
+[Task 1/5] A_Alien
+[tsn] task=0 it=0 ce=2.890529e+00 keep_ratio=0.2000 schedule=equal_remaining reuse=0 quant=0
+[tsn] task=0 it=19999 ce=7.276887e-03 keep_ratio=0.2000 schedule=equal_remaining reuse=0 quant=0
+[tsn] after task 0: occupied_ratio=0.2000 keep_ratio=0.2000
+[eval] after task 1 on A_Alien: 55.000 (target=86.0)
+[eval] after task 1 on B_Atlantis: 4.000 (target=1556.0)
+[eval] after task 1 on C_Boxing: 11.000 (target=97.0)
+[eval] after task 1 on D_Breakout: 5.000 (target=114.0)
+[eval] after task 1 on E_Centipede: 99.000 (target=135.0)
+
+[Task 2/5] B_Atlantis
+[tsn] task=1 it=0 ce=2.904569e+00 keep_ratio=0.2500 schedule=equal_remaining reuse=0 quant=0
+[tsn] task=1 it=19999 ce=1.921396e-01 keep_ratio=0.2500 schedule=equal_remaining reuse=0 quant=0
+[tsn] after task 1: occupied_ratio=0.4000 keep_ratio=0.2500
+[eval] after task 2 on A_Alien: 31.000 (target=86.0)
+[eval] after task 2 on B_Atlantis: 1527.000 (target=1556.0)
+[eval] after task 2 on C_Boxing: -2.000 (target=97.0)
+[eval] after task 2 on D_Breakout: 1.000 (target=114.0)
+[eval] after task 2 on E_Centipede: 65.000 (target=135.0)
+
+[Task 3/5] C_Boxing
+[tsn] task=2 it=0 ce=2.948392e+00 keep_ratio=0.3333 schedule=equal_remaining reuse=0 quant=0
+[tsn] task=2 it=19999 ce=6.570203e-03 keep_ratio=0.3333 schedule=equal_remaining reuse=0 quant=0
+[tsn] after task 2: occupied_ratio=0.6000 keep_ratio=0.3333
+[eval] after task 3 on A_Alien: 37.000 (target=86.0)
+[eval] after task 3 on B_Atlantis: 1480.000 (target=1556.0)
+[eval] after task 3 on C_Boxing: 90.000 (target=97.0)
+[eval] after task 3 on D_Breakout: 0.000 (target=114.0)
+[eval] after task 3 on E_Centipede: 117.000 (target=135.0)
+
+[Task 4/5] D_Breakout
+[tsn] task=3 it=0 ce=3.024092e+00 keep_ratio=0.5000 schedule=equal_remaining reuse=0 quant=0
+[tsn] task=3 it=19999 ce=1.167875e-02 keep_ratio=0.5000 schedule=equal_remaining reuse=0 quant=0
+[tsn] after task 3: occupied_ratio=0.8000 keep_ratio=0.5000
+[eval] after task 4 on A_Alien: 16.000 (target=86.0)
+[eval] after task 4 on B_Atlantis: 44.000 (target=1556.0)
+[eval] after task 4 on C_Boxing: 34.000 (target=97.0)
+[eval] after task 4 on D_Breakout: 31.000 (target=114.0)
+[eval] after task 4 on E_Centipede: 36.000 (target=135.0)
+
+[Task 5/5] E_Centipede
+[tsn] task=4 it=0 ce=3.015735e+00 keep_ratio=1.0000 schedule=equal_remaining reuse=0 quant=0
+[tsn] task=4 it=19999 ce=2.354104e-03 keep_ratio=1.0000 schedule=equal_remaining reuse=0 quant=0
+[tsn] after task 4: occupied_ratio=1.0000 keep_ratio=1.0000
+[eval] after task 5 on A_Alien: 27.000 (target=86.0)
+[eval] after task 5 on B_Atlantis: 62.000 (target=1556.0)
+[eval] after task 5 on C_Boxing: 33.000 (target=97.0)
+[eval] after task 5 on D_Breakout: 0.000 (target=114.0)
+[eval] after task 5 on E_Centipede: 130.000 (target=135.0)
+
+=== Continual DT results (offline=True) ===
+[[ 5.500e+01  4.000e+00  1.100e+01  5.000e+00  9.900e+01]
+ [ 3.100e+01  1.527e+03 -2.000e+00  1.000e+00  6.500e+01]
+ [ 3.700e+01  1.480e+03  9.000e+01  0.000e+00  1.170e+02]
+ [ 1.600e+01  4.400e+01  3.400e+01  3.100e+01  3.600e+01]
+ [ 2.700e+01  6.200e+01  3.300e+01  0.000e+00  1.300e+02]]
+
+[artifacts] saved to: runs/20260326-095409/atari/tsn/specs_atari_cl_5_minari_like__dm128_L3_H4_K20_drop0.10

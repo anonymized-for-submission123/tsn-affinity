@@ -1,0 +1,8 @@
+{
+  "metrics": {
+    "ACC": 29.0,
+    "BWT": -425.75,
+    "Forgetting": 425.75
+  },
+  "strategy": "ewc"
+}

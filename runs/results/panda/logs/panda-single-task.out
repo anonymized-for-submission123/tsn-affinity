@@ -1,0 +1,434 @@
+t0005
+t0005
+t0005
+t0005
+t0005
+t0005
+t0005
+t0005
+ GCCcore/13.2.0 loaded.
+ zlib/1.2.13 loaded.
+ binutils/2.40 loaded.
+ bzip2/1.0.8 loaded.
+ ncurses/6.4 loaded.
+ libreadline/8.2 loaded.
+ Tcl/8.6.13 loaded.
+ SQLite/3.43.1 loaded.
+ XZ/5.4.4 loaded.
+ libffi/3.4.4 loaded.
+ OpenSSL/1.1 loaded.
+ Python/3.11.5 loaded.
+pybullet build time: Jan 29 2025 23:17:20
+[device] using cuda
+[run_dir] runs/20260410-072553/panda/single_no_clmetrics/panda_single_all
+
+==============================
+[Panda Single-task 1/3] PandaReach
+==============================
+[task] env=PandaReachDense-v3 dataset=/net/tscratch/people/plgdomin088/datasets/panda_expert/panda_reach_dense_1m_expert.pkl
+[dataset] obs_keys=['observation', 'achieved_goal', 'desired_goal']
+[env] use_time_feature=True
+[dataset] using seq_len=5
+[dataset] n_trajs=370669 total_transitions=1000000 traj_len mean=2.70 min=1 max=5 p50=3 p90=4
+[dataset] obs_dim=13, act_dim=3
+[dataset] return mean=-0.208 min=-0.633 max=-0.000
+[dataset] computed obs_mean/std (std min=0.018269, max=0.674532)
+[dataset] rtg_scale=1000.000000
+[eval] selected target_return=-0.000320 (max)
+[dataset] using max_ep_len=100
+[train] optimizer_updates=50000 approx_updates_per_epoch=15625 approx_epochs=3.20
+[model] d_model=128 n_layers=3 n_heads=4 seq_len=5 max_ep_len=100 rtg_scale=1000.0
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=5, max_ep_len=100, state_dim=128, act_discrete=False, act_vocab_size=1, act_dim=3, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 0.62M
+[panda train] update 1/50000, loss=0.702179
+[panda train] update 500/50000, loss=0.026460
+[panda train] update 1000/50000, loss=0.012937
+[panda train] update 1500/50000, loss=0.012094
+[panda train] update 2000/50000, loss=0.010795
+[panda train] update 2500/50000, loss=0.013641
+[panda train] update 3000/50000, loss=0.008531
+[panda train] update 3500/50000, loss=0.008865
+[panda train] update 4000/50000, loss=0.019150
+[panda train] update 4500/50000, loss=0.005379
+[panda train] update 5000/50000, loss=0.011992
+[panda train] update 5500/50000, loss=0.004321
+[panda train] update 6000/50000, loss=0.008744
+[panda train] update 6500/50000, loss=0.004579
+[panda train] update 7000/50000, loss=0.006632
+[panda train] update 7500/50000, loss=0.005704
+[panda train] update 8000/50000, loss=0.004115
+[panda train] update 8500/50000, loss=0.004692
+[panda train] update 9000/50000, loss=0.004106
+[panda train] update 9500/50000, loss=0.003599
+[panda train] update 10000/50000, loss=0.004478
+[panda train] update 10500/50000, loss=0.003352
+[panda train] update 11000/50000, loss=0.003113
+[panda train] update 11500/50000, loss=0.003526
+[panda train] update 12000/50000, loss=0.005085
+[panda train] update 12500/50000, loss=0.003614
+[panda train] update 13000/50000, loss=0.003093
+[panda train] update 13500/50000, loss=0.004682
+[panda train] update 14000/50000, loss=0.004915
+[panda train] update 14500/50000, loss=0.002723
+[panda train] update 15000/50000, loss=0.003454
+[panda train] update 15500/50000, loss=0.003277
+[panda train] update 16000/50000, loss=0.004329
+[panda train] update 16500/50000, loss=0.002976
+[panda train] update 17000/50000, loss=0.004106
+[panda train] update 17500/50000, loss=0.003082
+[panda train] update 18000/50000, loss=0.006716
+[panda train] update 18500/50000, loss=0.002284
+[panda train] update 19000/50000, loss=0.002865
+[panda train] update 19500/50000, loss=0.002487
+[panda train] update 20000/50000, loss=0.004132
+[panda train] update 20500/50000, loss=0.002218
+[panda train] update 21000/50000, loss=0.003333
+[panda train] update 21500/50000, loss=0.002562
+[panda train] update 22000/50000, loss=0.003255
+[panda train] update 22500/50000, loss=0.002387
+[panda train] update 23000/50000, loss=0.002456
+[panda train] update 23500/50000, loss=0.002888
+[panda train] update 24000/50000, loss=0.002775
+[panda train] update 24500/50000, loss=0.002862
+[panda train] update 25000/50000, loss=0.002446
+[panda train] update 25500/50000, loss=0.002304
+[panda train] update 26000/50000, loss=0.003085
+[panda train] update 26500/50000, loss=0.002427
+[panda train] update 27000/50000, loss=0.002009
+[panda train] update 27500/50000, loss=0.002299
+[panda train] update 28000/50000, loss=0.002621
+[panda train] update 28500/50000, loss=0.001996
+[panda train] update 29000/50000, loss=0.001964
+[panda train] update 29500/50000, loss=0.002391
+[panda train] update 30000/50000, loss=0.002367
+[panda train] update 30500/50000, loss=0.002011
+[panda train] update 31000/50000, loss=0.003455
+[panda train] update 31500/50000, loss=0.002566
+[panda train] update 32000/50000, loss=0.002244
+[panda train] update 32500/50000, loss=0.003120
+[panda train] update 33000/50000, loss=0.002473
+[panda train] update 33500/50000, loss=0.002318
+[panda train] update 34000/50000, loss=0.001608
+[panda train] update 34500/50000, loss=0.002606
+[panda train] update 35000/50000, loss=0.001852
+[panda train] update 35500/50000, loss=0.002034
+[panda train] update 36000/50000, loss=0.002365
+[panda train] update 36500/50000, loss=0.002341
+[panda train] update 37000/50000, loss=0.001671
+[panda train] update 37500/50000, loss=0.002130
+[panda train] update 38000/50000, loss=0.002875
+[panda train] update 38500/50000, loss=0.001423
+[panda train] update 39000/50000, loss=0.001209
+[panda train] update 39500/50000, loss=0.001851
+[panda train] update 40000/50000, loss=0.001469
+[panda train] update 40500/50000, loss=0.001651
+[panda train] update 41000/50000, loss=0.001576
+[panda train] update 41500/50000, loss=0.003511
+[panda train] update 42000/50000, loss=0.001770
+[panda train] update 42500/50000, loss=0.002056
+[panda train] update 43000/50000, loss=0.001838
+[panda train] update 43500/50000, loss=0.001484
+[panda train] update 44000/50000, loss=0.001687
+[panda train] update 44500/50000, loss=0.001694
+[panda train] update 45000/50000, loss=0.001319
+[panda train] update 45500/50000, loss=0.001707
+[panda train] update 46000/50000, loss=0.001629
+[panda train] update 46500/50000, loss=0.001446
+[panda train] update 47000/50000, loss=0.002189
+[panda train] update 47500/50000, loss=0.002389
+[panda train] update 48000/50000, loss=0.001218
+[panda train] update 48500/50000, loss=0.001828
+[panda train] update 49000/50000, loss=0.002227
+[panda train] update 49500/50000, loss=0.001806
+[panda train] update 50000/50000, loss=0.002188
+[eval] target=-0.000 -> score=-0.243
+[eval] best sweep target=-0.000 -> score=-0.243
+[eval] Single-task Panda DT on PandaReach: -0.243
+
+==============================
+[Panda Single-task 2/3] PandaPush
+==============================
+[task] env=PandaPushDense-v3 dataset=/net/tscratch/people/plgdomin088/datasets/panda_expert/panda_push_dense_1m_expert.pkl
+[dataset] obs_keys=['observation', 'achieved_goal', 'desired_goal']
+[env] use_time_feature=True
+[dataset] using seq_len=20
+[dataset] n_trajs=141668 total_transitions=1000000 traj_len mean=7.06 min=1 max=50 p50=7 p90=10
+[dataset] obs_dim=25, act_dim=3
+[dataset] return mean=-0.937 min=-33.158 max=-0.001
+[dataset] computed obs_mean/std (std min=0.000001, max=1.404772)
+[dataset] rtg_scale=1000.000000
+[eval] selected target_return=-0.000605 (max)
+[dataset] using max_ep_len=100
+[train] optimizer_updates=50000 approx_updates_per_epoch=15625 approx_epochs=3.20
+[model] d_model=128 n_layers=3 n_heads=4 seq_len=20 max_ep_len=100 rtg_scale=1000.0
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=100, state_dim=128, act_discrete=False, act_vocab_size=1, act_dim=3, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 0.62M
+[panda train] update 1/50000, loss=0.649971
+[panda train] update 500/50000, loss=0.125352
+[panda train] update 1000/50000, loss=0.102053
+[panda train] update 1500/50000, loss=0.094140
+[panda train] update 2000/50000, loss=0.082429
+[panda train] update 2500/50000, loss=0.062006
+[panda train] update 3000/50000, loss=0.062978
+[panda train] update 3500/50000, loss=0.100011
+[panda train] update 4000/50000, loss=0.058435
+[panda train] update 4500/50000, loss=0.052857
+[panda train] update 5000/50000, loss=0.074960
+[panda train] update 5500/50000, loss=0.045821
+[panda train] update 6000/50000, loss=0.061431
+[panda train] update 6500/50000, loss=0.059625
+[panda train] update 7000/50000, loss=0.061036
+[panda train] update 7500/50000, loss=0.084218
+[panda train] update 8000/50000, loss=0.073516
+[panda train] update 8500/50000, loss=0.032280
+[panda train] update 9000/50000, loss=0.064048
+[panda train] update 9500/50000, loss=0.048513
+[panda train] update 10000/50000, loss=0.046112
+[panda train] update 10500/50000, loss=0.061028
+[panda train] update 11000/50000, loss=0.056429
+[panda train] update 11500/50000, loss=0.027394
+[panda train] update 12000/50000, loss=0.033022
+[panda train] update 12500/50000, loss=0.039716
+[panda train] update 13000/50000, loss=0.079656
+[panda train] update 13500/50000, loss=0.055059
+[panda train] update 14000/50000, loss=0.032647
+[panda train] update 14500/50000, loss=0.054719
+[panda train] update 15000/50000, loss=0.053624
+[panda train] update 15500/50000, loss=0.036626
+[panda train] update 16000/50000, loss=0.056283
+[panda train] update 16500/50000, loss=0.046927
+[panda train] update 17000/50000, loss=0.022065
+[panda train] update 17500/50000, loss=0.038131
+[panda train] update 18000/50000, loss=0.059899
+[panda train] update 18500/50000, loss=0.037126
+[panda train] update 19000/50000, loss=0.078931
+[panda train] update 19500/50000, loss=0.024789
+[panda train] update 20000/50000, loss=0.042079
+[panda train] update 20500/50000, loss=0.044382
+[panda train] update 21000/50000, loss=0.022175
+[panda train] update 21500/50000, loss=0.036303
+[panda train] update 22000/50000, loss=0.039071
+[panda train] update 22500/50000, loss=0.017974
+[panda train] update 23000/50000, loss=0.060762
+[panda train] update 23500/50000, loss=0.018006
+[panda train] update 24000/50000, loss=0.022989
+[panda train] update 24500/50000, loss=0.023098
+[panda train] update 25000/50000, loss=0.046109
+[panda train] update 25500/50000, loss=0.029387
+[panda train] update 26000/50000, loss=0.019324
+[panda train] update 26500/50000, loss=0.028288
+[panda train] update 27000/50000, loss=0.061998
+[panda train] update 27500/50000, loss=0.014604
+[panda train] update 28000/50000, loss=0.026879
+[panda train] update 28500/50000, loss=0.028618
+[panda train] update 29000/50000, loss=0.021407
+[panda train] update 29500/50000, loss=0.030776
+[panda train] update 30000/50000, loss=0.047650
+[panda train] update 30500/50000, loss=0.022543
+[panda train] update 31000/50000, loss=0.054515
+[panda train] update 31500/50000, loss=0.036393
+[panda train] update 32000/50000, loss=0.027664
+[panda train] update 32500/50000, loss=0.022007
+[panda train] update 33000/50000, loss=0.019325
+[panda train] update 33500/50000, loss=0.023260
+[panda train] update 34000/50000, loss=0.043369
+[panda train] update 34500/50000, loss=0.035771
+[panda train] update 35000/50000, loss=0.022416
+[panda train] update 35500/50000, loss=0.027936
+[panda train] update 36000/50000, loss=0.041971
+[panda train] update 36500/50000, loss=0.025574
+[panda train] update 37000/50000, loss=0.017419
+[panda train] update 37500/50000, loss=0.046427
+[panda train] update 38000/50000, loss=0.032075
+[panda train] update 38500/50000, loss=0.023984
+[panda train] update 39000/50000, loss=0.032507
+[panda train] update 39500/50000, loss=0.030245
+[panda train] update 40000/50000, loss=0.031676
+[panda train] update 40500/50000, loss=0.042546
+[panda train] update 41000/50000, loss=0.040932
+[panda train] update 41500/50000, loss=0.054888
+[panda train] update 42000/50000, loss=0.033358
+[panda train] update 42500/50000, loss=0.040346
+[panda train] update 43000/50000, loss=0.014524
+[panda train] update 43500/50000, loss=0.033542
+[panda train] update 44000/50000, loss=0.007745
+[panda train] update 44500/50000, loss=0.030885
+[panda train] update 45000/50000, loss=0.036494
+[panda train] update 45500/50000, loss=0.016312
+[panda train] update 46000/50000, loss=0.018541
+[panda train] update 46500/50000, loss=0.040978
+[panda train] update 47000/50000, loss=0.033364
+[panda train] update 47500/50000, loss=0.019267
+[panda train] update 48000/50000, loss=0.026558
+[panda train] update 48500/50000, loss=0.052179
+[panda train] update 49000/50000, loss=0.014326
+[panda train] update 49500/50000, loss=0.039809
+[panda train] update 50000/50000, loss=0.019942
+[eval] target=-0.001 -> score=-1.172
+[eval] best sweep target=-0.001 -> score=-1.172
+[eval] Single-task Panda DT on PandaPush: -1.172
+
+==============================
+[Panda Single-task 3/3] PandaPickAndPlace
+==============================
+[task] env=PandaPickAndPlaceDense-v3 dataset=/net/tscratch/people/plgdomin088/datasets/panda_expert/panda_pick_and_place_dense_1m_expert.pkl
+[dataset] obs_keys=['observation', 'achieved_goal', 'desired_goal']
+[env] use_time_feature=True
+[dataset] using seq_len=20
+[dataset] n_trajs=119353 total_transitions=1000000 traj_len mean=8.38 min=1 max=50 p50=8 p90=10
+[dataset] obs_dim=26, act_dim=4
+[dataset] return mean=-1.298 min=-57.910 max=-0.001
+[dataset] computed obs_mean/std (std min=0.029836, max=1.983367)
+[dataset] rtg_scale=1000.000000
+[eval] selected target_return=-0.000970 (max)
+[dataset] using max_ep_len=100
+[train] optimizer_updates=50000 approx_updates_per_epoch=15625 approx_epochs=3.20
+[model] d_model=128 n_layers=3 n_heads=4 seq_len=20 max_ep_len=100 rtg_scale=1000.0
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=100, state_dim=128, act_discrete=False, act_vocab_size=1, act_dim=4, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 0.62M
+[panda train] update 1/50000, loss=0.652359
+[panda train] update 500/50000, loss=0.161654
+[panda train] update 1000/50000, loss=0.086073
+[panda train] update 1500/50000, loss=0.074992
+[panda train] update 2000/50000, loss=0.064394
+[panda train] update 2500/50000, loss=0.115298
+[panda train] update 3000/50000, loss=0.040782
+[panda train] update 3500/50000, loss=0.095867
+[panda train] update 4000/50000, loss=0.038881
+[panda train] update 4500/50000, loss=0.055386
+[panda train] update 5000/50000, loss=0.080020
+[panda train] update 5500/50000, loss=0.050302
+[panda train] update 6000/50000, loss=0.053067
+[panda train] update 6500/50000, loss=0.085201
+[panda train] update 7000/50000, loss=0.046374
+[panda train] update 7500/50000, loss=0.063216
+[panda train] update 8000/50000, loss=0.018750
+[panda train] update 8500/50000, loss=0.051161
+[panda train] update 9000/50000, loss=0.046905
+[panda train] update 9500/50000, loss=0.088419
+[panda train] update 10000/50000, loss=0.098243
+[panda train] update 10500/50000, loss=0.037333
+[panda train] update 11000/50000, loss=0.034599
+[panda train] update 11500/50000, loss=0.073331
+[panda train] update 12000/50000, loss=0.039473
+[panda train] update 12500/50000, loss=0.077560
+[panda train] update 13000/50000, loss=0.056434
+[panda train] update 13500/50000, loss=0.030128
+[panda train] update 14000/50000, loss=0.062463
+[panda train] update 14500/50000, loss=0.026042
+[panda train] update 15000/50000, loss=0.060612
+[panda train] update 15500/50000, loss=0.027969
+[panda train] update 16000/50000, loss=0.047411
+[panda train] update 16500/50000, loss=0.034914
+[panda train] update 17000/50000, loss=0.059759
+[panda train] update 17500/50000, loss=0.023852
+[panda train] update 18000/50000, loss=0.040509
+[panda train] update 18500/50000, loss=0.061424
+[panda train] update 19000/50000, loss=0.027516
+[panda train] update 19500/50000, loss=0.039785
+[panda train] update 20000/50000, loss=0.068082
+[panda train] update 20500/50000, loss=0.071905
+[panda train] update 21000/50000, loss=0.021246
+[panda train] update 21500/50000, loss=0.032906
+[panda train] update 22000/50000, loss=0.047627
+[panda train] update 22500/50000, loss=0.032307
+[panda train] update 23000/50000, loss=0.024179
+[panda train] update 23500/50000, loss=0.061050
+[panda train] update 24000/50000, loss=0.053171
+[panda train] update 24500/50000, loss=0.056394
+[panda train] update 25000/50000, loss=0.038428
+[panda train] update 25500/50000, loss=0.036771
+[panda train] update 26000/50000, loss=0.065002
+[panda train] update 26500/50000, loss=0.077124
+[panda train] update 27000/50000, loss=0.054784
+[panda train] update 27500/50000, loss=0.036906
+[panda train] update 28000/50000, loss=0.045860
+[panda train] update 28500/50000, loss=0.043155
+[panda train] update 29000/50000, loss=0.029215
+[panda train] update 29500/50000, loss=0.030839
+[panda train] update 30000/50000, loss=0.058082
+[panda train] update 30500/50000, loss=0.016615
+[panda train] update 31000/50000, loss=0.038965
+[panda train] update 31500/50000, loss=0.037166
+[panda train] update 32000/50000, loss=0.047332
+[panda train] update 32500/50000, loss=0.042907
+[panda train] update 33000/50000, loss=0.022914
+[panda train] update 33500/50000, loss=0.048878
+[panda train] update 34000/50000, loss=0.019318
+[panda train] update 34500/50000, loss=0.035859
+[panda train] update 35000/50000, loss=0.059728
+[panda train] update 35500/50000, loss=0.057012
+[panda train] update 36000/50000, loss=0.035539
+[panda train] update 36500/50000, loss=0.036981
+[panda train] update 37000/50000, loss=0.037597
+[panda train] update 37500/50000, loss=0.053089
+[panda train] update 38000/50000, loss=0.026430
+[panda train] update 38500/50000, loss=0.046550
+[panda train] update 39000/50000, loss=0.044487
+[panda train] update 39500/50000, loss=0.029454
+[panda train] update 40000/50000, loss=0.016207
+[panda train] update 40500/50000, loss=0.036492
+[panda train] update 41000/50000, loss=0.025308
+[panda train] update 41500/50000, loss=0.019893
+[panda train] update 42000/50000, loss=0.048066
+[panda train] update 42500/50000, loss=0.030398
+[panda train] update 43000/50000, loss=0.027969
+[panda train] update 43500/50000, loss=0.043889
+[panda train] update 44000/50000, loss=0.025505
+[panda train] update 44500/50000, loss=0.033836
+[panda train] update 45000/50000, loss=0.045275
+[panda train] update 45500/50000, loss=0.050990
+[panda train] update 46000/50000, loss=0.031111
+[panda train] update 46500/50000, loss=0.016361
+[panda train] update 47000/50000, loss=0.027937
+[panda train] update 47500/50000, loss=0.054471
+[panda train] update 48000/50000, loss=0.058727
+[panda train] update 48500/50000, loss=0.027611
+[panda train] update 49000/50000, loss=0.026751
+[panda train] update 49500/50000, loss=0.036064
+[panda train] update 50000/50000, loss=0.043819
+[eval] target=-0.001 -> score=-0.894
+[eval] best sweep target=-0.001 -> score=-0.894
+[eval] Single-task Panda DT on PandaPickAndPlace: -0.894
+
+=== Single-task Panda DT results ===
+PandaReach: -0.243
+PandaPush: -1.172
+PandaPickAndPlace: -0.894
+
+[artifacts] saved to: runs/20260410-072553/panda/single_no_clmetrics/panda_single_all
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+A.L.E: Arcade Learning Environment (version 0.11.2+ecc1138)
+[Powered by Stella]
+/net/people/plgrid/plgdomin088/clbench_dt_full_build/strategies/tsn_common.py:180: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:217.)
+  return F.linear(x, w, b)
+/net/tscratch/people/plgdomin088/.venv/lib/python3.11/site-packages/torch/autograd/graph.py:823: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:217.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/net/tscratch/people/plgdomin088/.venv/lib/python3.11/site-packages/torch/autograd/graph.py:823: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at /pytorch/aten/src/ATen/native/transformers/cuda/attention_backward.cu:683.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass

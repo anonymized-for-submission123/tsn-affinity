@@ -1,0 +1,49 @@
+{
+  "per_step": [
+    {
+      "step": 1,
+      "task_name": "D_Breakout",
+      "acc_i": 97.0,
+      "bwt_i": 0.0,
+      "forgetting_i": 0.0,
+      "diag": 97.0,
+      "mean_seen": 97.0
+    },
+    {
+      "step": 2,
+      "task_name": "A_Alien",
+      "acc_i": 67.5,
+      "bwt_i": 0.0,
+      "forgetting_i": 0.0,
+      "diag": 38.0,
+      "mean_seen": 67.5
+    },
+    {
+      "step": 3,
+      "task_name": "B_Atlantis",
+      "acc_i": 548.6666870117188,
+      "bwt_i": 0.0,
+      "forgetting_i": 0.0,
+      "diag": 1511.0,
+      "mean_seen": 548.6666870117188
+    },
+    {
+      "step": 4,
+      "task_name": "C_Boxing",
+      "acc_i": 434.5,
+      "bwt_i": 0.0,
+      "forgetting_i": 0.0,
+      "diag": 92.0,
+      "mean_seen": 434.5
+    },
+    {
+      "step": 5,
+      "task_name": "E_Centipede",
+      "acc_i": 360.0,
+      "bwt_i": 0.0,
+      "forgetting_i": 0.0,
+      "diag": 62.0,
+      "mean_seen": 360.0
+    }
+  ]
+}

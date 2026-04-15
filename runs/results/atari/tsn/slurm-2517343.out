@@ -1,0 +1,176 @@
+t0031
+t0031
+t0031
+t0031
+t0031
+t0031
+t0031
+t0031
+ GCCcore/13.2.0 loaded.
+ zlib/1.2.13 loaded.
+ binutils/2.40 loaded.
+ bzip2/1.0.8 loaded.
+ ncurses/6.4 loaded.
+ libreadline/8.2 loaded.
+ Tcl/8.6.13 loaded.
+ SQLite/3.43.1 loaded.
+ XZ/5.4.4 loaded.
+ libffi/3.4.4 loaded.
+ OpenSSL/1.1 loaded.
+ Python/3.11.5 loaded.
+A.L.E: Arcade Learning Environment (version 0.11.2+ecc1138)
+[Powered by Stella]
+/net/tscratch/people/plgdomin088/.venv/lib/python3.11/site-packages/torch/nn/modules/linear.py:125: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:217.)
+  return F.linear(input, self.weight, self.bias)
+/net/tscratch/people/plgdomin088/.venv/lib/python3.11/site-packages/torch/autograd/graph.py:823: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:217.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/net/tscratch/people/plgdomin088/.venv/lib/python3.11/site-packages/torch/autograd/graph.py:823: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at /pytorch/aten/src/ATen/native/transformers/cuda/attention_backward.cu:683.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[device] cuda
+[seed] mode=spec
+[seed] seed_override=None
+[seed] seed_offset=0
+[determinism] CUBLAS_WORKSPACE_CONFIG=<unset>
+[run_dir] runs/atari__single_task_dt__specs_atari_cl_5_minari_like__dm128_L3_H4_K20_drop0.10__sspec__r002__20260411-141847
+
+[Single-task 1/5] A_Alien (ALE/Alien-v5)
+[seed] task=A_Alien base_seed=0 effective_seed=0
+[data] loading /net/tscratch/people/plgdomin088/datasets/atari_expert/A_Alien/expert_minari_dqn.npz
+[data] episodes=10, mean=60.6, min=40.0, max=86.0
+[data] obs dtype=float32, min=0.000, max=0.522, shape=(4, 84, 84)
+[data] rtg_scale used = 1556.0
+[data] action mapping identity (ep0 replay matches dataset): 79.00 == 79.00 (seed=0)
+[data] action mapping identity (ep0 replay matches dataset): 79.00 == 79.00
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=27001, state_dim=128, act_discrete=True, act_vocab_size=18, act_dim=1, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 4.07M
+[train] batch obs dtype=torch.float32, raw_min=0.000, raw_max=0.910
+[train] batch actions dtype=torch.int64, min=0, max=17
+[train] batch rtg dtype=torch.float32, min=0.000, max=72.000
+[train] model.rtg_scale=1556.0
+[train] step 2000/20000, loss=0.2079
+[train] step 4000/20000, loss=0.0481
+[train] step 6000/20000, loss=0.0094
+[train] step 8000/20000, loss=0.0114
+[train] step 10000/20000, loss=0.0099
+[train] step 12000/20000, loss=0.0061
+[train] step 14000/20000, loss=0.0022
+[train] step 16000/20000, loss=0.0008
+[train] step 18000/20000, loss=0.0012
+[train] step 20000/20000, loss=0.0079
+[eval] auto_fire=False auto_fire_on_life_loss=False eval_seed=0
+[eval] A_Alien: avg_return=62.000 (target_return=86.00, seed=0)
+
+[Single-task 2/5] B_Atlantis (ALE/Atlantis-v5)
+[seed] task=B_Atlantis base_seed=1 effective_seed=1
+[data] loading /net/tscratch/people/plgdomin088/datasets/atari_expert/B_Atlantis/expert_minari_dqn.npz
+[data] episodes=10, mean=1550.0, min=1543.0, max=1556.0
+[data] obs dtype=float32, min=0.000, max=0.737, shape=(4, 84, 84)
+[data] rtg_scale used = 1556.0
+[data] action mapping identity (ep0 replay matches dataset): 1546.00 == 1546.00 (seed=1)
+[data] action mapping identity (ep0 replay matches dataset): 1546.00 == 1546.00
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=27001, state_dim=128, act_discrete=True, act_vocab_size=4, act_dim=1, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 4.06M
+[train] batch obs dtype=torch.float32, raw_min=0.000, raw_max=0.933
+[train] batch actions dtype=torch.int64, min=0, max=3
+[train] batch rtg dtype=torch.float32, min=52.000, max=1556.000
+[train] model.rtg_scale=1556.0
+[train] step 2000/20000, loss=0.7564
+[train] step 4000/20000, loss=0.5639
+[train] step 6000/20000, loss=0.4074
+[train] step 8000/20000, loss=0.3316
+[train] step 10000/20000, loss=0.2733
+[train] step 12000/20000, loss=0.2525
+[train] step 14000/20000, loss=0.2177
+[train] step 16000/20000, loss=0.1555
+[train] step 18000/20000, loss=0.1367
+[train] step 20000/20000, loss=0.1089
+[eval] auto_fire=False auto_fire_on_life_loss=False eval_seed=1
+[eval] B_Atlantis: avg_return=1505.000 (target_return=1556.00, seed=1)
+
+[Single-task 3/5] C_Boxing (ALE/Boxing-v5)
+[seed] task=C_Boxing base_seed=2 effective_seed=2
+[data] loading /net/tscratch/people/plgdomin088/datasets/atari_expert/C_Boxing/expert_minari_dqn.npz
+[data] episodes=10, mean=92.0, min=86.0, max=97.0
+[data] obs dtype=float32, min=0.000, max=0.843, shape=(4, 84, 84)
+[data] rtg_scale used = 1556.0
+[data] action mapping identity (ep0 replay matches dataset): 90.00 == 90.00 (seed=2)
+[data] action mapping identity (ep0 replay matches dataset): 90.00 == 90.00
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=27001, state_dim=128, act_discrete=True, act_vocab_size=18, act_dim=1, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 4.07M
+[train] batch obs dtype=torch.float32, raw_min=0.000, raw_max=0.851
+[train] batch actions dtype=torch.int64, min=0, max=17
+[train] batch rtg dtype=torch.float32, min=-7.000, max=96.000
+[train] model.rtg_scale=1556.0
+[train] step 2000/20000, loss=0.0463
+[train] step 4000/20000, loss=0.0060
+[train] step 6000/20000, loss=0.0245
+[train] step 8000/20000, loss=0.0048
+[train] step 10000/20000, loss=0.0023
+[train] step 12000/20000, loss=0.0116
+[train] step 14000/20000, loss=0.0100
+[train] step 16000/20000, loss=0.0132
+[train] step 18000/20000, loss=0.0074
+[train] step 20000/20000, loss=0.0036
+[eval] auto_fire=False auto_fire_on_life_loss=False eval_seed=2
+[eval] C_Boxing: avg_return=86.000 (target_return=97.00, seed=2)
+
+[Single-task 4/5] D_Breakout (ALE/Breakout-v5)
+[seed] task=D_Breakout base_seed=3 effective_seed=3
+[data] loading /net/tscratch/people/plgdomin088/datasets/atari_expert/D_Breakout/expert_minari_dqn.npz
+[data] episodes=10, mean=91.5, min=35.0, max=114.0
+[data] obs dtype=float32, min=0.000, max=0.580, shape=(4, 84, 84)
+[data] rtg_scale used = 1556.0
+[data] action mapping identity (ep0 replay matches dataset): 97.00 == 97.00 (seed=3)
+[data] action mapping identity (ep0 replay matches dataset): 97.00 == 97.00
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=27001, state_dim=128, act_discrete=True, act_vocab_size=4, act_dim=1, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 4.06M
+[train] batch obs dtype=torch.float32, raw_min=0.000, raw_max=0.584
+[train] batch actions dtype=torch.int64, min=0, max=3
+[train] batch rtg dtype=torch.float32, min=0.000, max=108.000
+[train] model.rtg_scale=1556.0
+[train] step 2000/20000, loss=0.2761
+[train] step 4000/20000, loss=0.0476
+[train] step 6000/20000, loss=0.0275
+[train] step 8000/20000, loss=0.0115
+[train] step 10000/20000, loss=0.0105
+[train] step 12000/20000, loss=0.0069
+[train] step 14000/20000, loss=0.0044
+[train] step 16000/20000, loss=0.0041
+[train] step 18000/20000, loss=0.0031
+[train] step 20000/20000, loss=0.0006
+[eval] auto_fire=False auto_fire_on_life_loss=False eval_seed=3
+[eval] D_Breakout: avg_return=112.000 (target_return=114.00, seed=3)
+
+[Single-task 5/5] E_Centipede (ALE/Centipede-v5)
+[seed] task=E_Centipede base_seed=4 effective_seed=4
+[data] loading /net/tscratch/people/plgdomin088/datasets/atari_expert/E_Centipede/expert_minari_dqn.npz
+[data] episodes=10, mean=115.9, min=90.0, max=135.0
+[data] obs dtype=float32, min=0.000, max=0.663, shape=(4, 84, 84)
+[data] rtg_scale used = 1556.0
+[data] action mapping identity (ep0 replay matches dataset): 117.00 == 117.00 (seed=4)
+[data] action mapping identity (ep0 replay matches dataset): 117.00 == 117.00
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=27001, state_dim=128, act_discrete=True, act_vocab_size=18, act_dim=1, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 4.07M
+[train] batch obs dtype=torch.float32, raw_min=0.000, raw_max=0.706
+[train] batch actions dtype=torch.int64, min=0, max=17
+[train] batch rtg dtype=torch.float32, min=5.000, max=128.000
+[train] model.rtg_scale=1556.0
+[train] step 2000/20000, loss=0.0856
+[train] step 4000/20000, loss=0.0260
+[train] step 6000/20000, loss=0.0655
+[train] step 8000/20000, loss=0.0059
+[train] step 10000/20000, loss=0.0019
+[train] step 12000/20000, loss=0.0003
+[train] step 14000/20000, loss=0.0003
+[train] step 16000/20000, loss=0.0004
+[train] step 18000/20000, loss=0.0015
+[train] step 20000/20000, loss=0.0016
+[eval] auto_fire=False auto_fire_on_life_loss=False eval_seed=4
+[eval] E_Centipede: avg_return=117.000 (target_return=135.00, seed=4)
+
+=== Single-task Minari Atari DT results ===
+A_Alien: 62.000
+B_Atlantis: 1505.000
+C_Boxing: 86.000
+D_Breakout: 112.000
+E_Centipede: 117.000

@@ -1,0 +1,11 @@
+{
+  "metrics": {
+    "ACC": -0.8607895970344543,
+    "BWT": -0.0008457601070404053,
+    "Forgetting": 0.0008457601070404053
+  },
+  "strategy": "tsn_improved_reuse",
+  "model_signature": "dm128_L3_H1_K20_drop0.10",
+  "tsn_reuse_score_mode": "action",
+  "tsn_reuse_signature": "rsm-action_athr0.45"
+}

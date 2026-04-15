@@ -1,0 +1,130 @@
+t0023
+t0023
+t0023
+t0023
+t0023
+t0023
+t0023
+t0023
+ GCCcore/13.2.0 loaded.
+ zlib/1.2.13 loaded.
+ binutils/2.40 loaded.
+ bzip2/1.0.8 loaded.
+ ncurses/6.4 loaded.
+ libreadline/8.2 loaded.
+ Tcl/8.6.13 loaded.
+ SQLite/3.43.1 loaded.
+ XZ/5.4.4 loaded.
+ libffi/3.4.4 loaded.
+ OpenSSL/1.1 loaded.
+ Python/3.11.5 loaded.
+A.L.E: Arcade Learning Environment (version 0.11.2+ecc1138)
+[Powered by Stella]
+/net/people/plgrid/plgdomin088/clbench_dt_full_build/strategies/tsn_common.py:180: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:217.)
+  return F.linear(x, w, b)
+/net/tscratch/people/plgdomin088/.venv/lib/python3.11/site-packages/torch/autograd/graph.py:823: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:217.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/net/tscratch/people/plgdomin088/.venv/lib/python3.11/site-packages/torch/autograd/graph.py:823: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at /pytorch/aten/src/ATen/native/transformers/cuda/attention_backward.cu:683.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[seed] global_train_seed=0
+[seed] task/eval seeds come from task spec file
+[determinism] CUBLAS_WORKSPACE_CONFIG=<unset>
+D_Breakout: env=EnvSpec(id='ALE/Breakout-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'breakout', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Breakout', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.5803921818733215)
+A_Alien: env=EnvSpec(id='ALE/Alien-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'alien', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Alien', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.5176470875740051)
+B_Atlantis: env=EnvSpec(id='ALE/Atlantis-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'atlantis', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Atlantis', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.7372549176216125)
+C_Boxing: env=EnvSpec(id='ALE/Boxing-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'boxing', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Boxing', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.8392156958580017)
+E_Centipede: env=EnvSpec(id='ALE/Centipede-v5', entry_point='ale_py.env:AtariEnv', reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, disable_env_checker=False, kwargs={'game': 'centipede', 'repeat_action_probability': 0.0, 'full_action_space': False, 'frameskip': 4, 'max_num_frames_per_episode': 108000, 'obs_type': 'rgb'}, namespace='ALE', name='Centipede', version=5, additional_wrappers=(WrapperSpec(name='MinariDQNStackWrapper', entry_point='dt.utils:MinariDQNStackWrapper', kwargs=None),), vector_entry_point='ale_py.vector_env:AtariVectorEnv'), wrappers=['MinariDQNStackWrapper', 'OrderEnforcing', 'PassiveEnvChecker'], obs_shape_sample=(4, 84, 84), obs_dtype_sample=float32, obs_minmax_sample=(0.0, 0.6627451181411743)
+[run_dir] runs/atari__tsn_improved_reuse__specs_atari_cl_5_minari_like_breakout_first__dm128_L3_H4_K20_drop0.10__s0__rsm-action_athr12__r001__20260412-112656
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=10000, state_dim=128, act_discrete=True, act_vocab_size=18, act_dim=1, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 1.89M
+[mode] Using OFFLINE expert trajectories from: /net/tscratch/people/plgdomin088/datasets/atari_expert
+[seed-map] task/eval seeds from spec:
+[seed-map] D_Breakout: 0
+[seed-map] A_Alien: 1
+[seed-map] B_Atlantis: 2
+[seed-map] C_Boxing: 3
+[seed-map] E_Centipede: 4
+[offline] loading trajectories for task 'D_Breakout' from /net/tscratch/people/plgdomin088/datasets/atari_expert/D_Breakout/expert_minari_dqn.npz
+[offline] task=D_Breakout, episodes=10, avg_return=91.5, min=35.0, max=114.0
+[offline] target_return[D_Breakout] = 114.00 (mode=max)
+[replay-check] D_Breakout: dataset_ep0=97.000 env_ep0=97.000 diff=0.000 ok=True
+[offline] loading trajectories for task 'A_Alien' from /net/tscratch/people/plgdomin088/datasets/atari_expert/A_Alien/expert_minari_dqn.npz
+[offline] task=A_Alien, episodes=10, avg_return=60.6, min=40.0, max=86.0
+[offline] target_return[A_Alien] = 86.00 (mode=max)
+[replay-check] A_Alien: dataset_ep0=79.000 env_ep0=79.000 diff=0.000 ok=True
+[offline] loading trajectories for task 'B_Atlantis' from /net/tscratch/people/plgdomin088/datasets/atari_expert/B_Atlantis/expert_minari_dqn.npz
+[offline] task=B_Atlantis, episodes=10, avg_return=1550.0, min=1543.0, max=1556.0
+[offline] target_return[B_Atlantis] = 1556.00 (mode=max)
+[replay-check] B_Atlantis: dataset_ep0=1546.000 env_ep0=1546.000 diff=0.000 ok=True
+[offline] loading trajectories for task 'C_Boxing' from /net/tscratch/people/plgdomin088/datasets/atari_expert/C_Boxing/expert_minari_dqn.npz
+[offline] task=C_Boxing, episodes=10, avg_return=92.0, min=86.0, max=97.0
+[offline] target_return[C_Boxing] = 97.00 (mode=max)
+[replay-check] C_Boxing: dataset_ep0=90.000 env_ep0=90.000 diff=0.000 ok=True
+[offline] loading trajectories for task 'E_Centipede' from /net/tscratch/people/plgdomin088/datasets/atari_expert/E_Centipede/expert_minari_dqn.npz
+[offline] task=E_Centipede, episodes=10, avg_return=115.9, min=90.0, max=135.0
+[offline] target_return[E_Centipede] = 135.00 (mode=max)
+[replay-check] E_Centipede: dataset_ep0=117.000 env_ep0=117.000 diff=0.000 ok=True
+[patch] set model.rtg_scale = 1556.000
+[patch] expanded time-embedding: 10000 -> 27001
+[patch] rebuilt optimizer after time-embedding expansion
+
+[Task 1/5] D_Breakout [global_train_seed=0]
+[tsn-improved-reuse-atari] task=0 copy=0 src=None score_mode=action best_action=None best_latent=None best_score=None new_copy=0 it=0 ce=2.974118e+00 keep_ratio=0.5000
+[tsn-improved-reuse-atari] task=0 copy=0 src=None score_mode=action best_action=None best_latent=None best_score=None new_copy=0 it=19999 ce=1.151837e-02 keep_ratio=0.5000
+[tsn-improved-reuse-atari] after task 0: copy=0 occupied_ratio=0.5000 source_task=None best_action=None best_latent=None best_score=None created_new_copy=False
+[eval] after task 1 on D_Breakout: 97.000 (target=114.0, eval_seed=0)
+[eval] after task 1 on A_Alien: 3.000 (target=86.0, eval_seed=1)
+[eval] after task 1 on B_Atlantis: 18.000 (target=1556.0, eval_seed=2)
+[eval] after task 1 on C_Boxing: -16.000 (target=97.0, eval_seed=3)
+[eval] after task 1 on E_Centipede: 45.000 (target=135.0, eval_seed=4)
+
+[Task 2/5] A_Alien [global_train_seed=0]
+DTBackbone config: DTConfig(n_layer=3, n_head=4, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=27001, state_dim=128, act_discrete=True, act_vocab_size=18, act_dim=1, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 4.07M
+[tsn-improved-reuse-atari] task=1 copy=1 src=0 score_mode=action best_action=17.097182273864746 best_latent=None best_score=17.097182273864746 new_copy=1 it=0 ce=2.904634e+00 keep_ratio=0.5000
+[tsn-improved-reuse-atari] task=1 copy=1 src=0 score_mode=action best_action=17.097182273864746 best_latent=None best_score=17.097182273864746 new_copy=1 it=19999 ce=1.123270e-02 keep_ratio=0.5000
+[tsn-improved-reuse-atari] after task 1: copy=1 occupied_ratio=0.5000 source_task=0 best_action=17.097182273864746 best_latent=None best_score=17.097182273864746 created_new_copy=True
+[eval] after task 2 on D_Breakout: 97.000 (target=114.0, eval_seed=0)
+[eval] after task 2 on A_Alien: 73.000 (target=86.0, eval_seed=1)
+[eval] after task 2 on B_Atlantis: 48.000 (target=1556.0, eval_seed=2)
+[eval] after task 2 on C_Boxing: -1.000 (target=97.0, eval_seed=3)
+[eval] after task 2 on E_Centipede: 63.000 (target=135.0, eval_seed=4)
+
+[Task 3/5] B_Atlantis [global_train_seed=0]
+[tsn-improved-reuse-atari] task=2 copy=0 src=0 score_mode=action best_action=5.491943717002869 best_latent=None best_score=5.491943717002869 new_copy=0 it=0 ce=5.441213e+00 keep_ratio=0.5000
+[tsn-improved-reuse-atari] task=2 copy=0 src=0 score_mode=action best_action=5.491943717002869 best_latent=None best_score=5.491943717002869 new_copy=0 it=19999 ce=8.001968e-01 keep_ratio=0.5000
+[tsn-improved-reuse-atari] after task 2: copy=0 occupied_ratio=0.5311 source_task=0 best_action=5.491943717002869 best_latent=None best_score=5.491943717002869 created_new_copy=False
+[eval] after task 3 on D_Breakout: 97.000 (target=114.0, eval_seed=0)
+[eval] after task 3 on A_Alien: 73.000 (target=86.0, eval_seed=1)
+[eval] after task 3 on B_Atlantis: 1512.000 (target=1556.0, eval_seed=2)
+[eval] after task 3 on C_Boxing: -8.000 (target=97.0, eval_seed=3)
+[eval] after task 3 on E_Centipede: 75.000 (target=135.0, eval_seed=4)
+
+[Task 4/5] C_Boxing [global_train_seed=0]
+[tsn-improved-reuse-atari] task=3 copy=0 src=2 score_mode=action best_action=11.034319400787354 best_latent=None best_score=11.034319400787354 new_copy=0 it=0 ce=1.088876e+01 keep_ratio=0.5000
+[tsn-improved-reuse-atari] task=3 copy=0 src=2 score_mode=action best_action=11.034319400787354 best_latent=None best_score=11.034319400787354 new_copy=0 it=19999 ce=8.411612e-02 keep_ratio=0.5000
+[tsn-improved-reuse-atari] after task 3: copy=0 occupied_ratio=0.5770 source_task=2 best_action=11.034319400787354 best_latent=None best_score=11.034319400787354 created_new_copy=False
+[eval] after task 4 on D_Breakout: 97.000 (target=114.0, eval_seed=0)
+[eval] after task 4 on A_Alien: 73.000 (target=86.0, eval_seed=1)
+[eval] after task 4 on B_Atlantis: 1512.000 (target=1556.0, eval_seed=2)
+[eval] after task 4 on C_Boxing: 90.000 (target=97.0, eval_seed=3)
+[eval] after task 4 on E_Centipede: 84.000 (target=135.0, eval_seed=4)
+
+[Task 5/5] E_Centipede [global_train_seed=0]
+[tsn-improved-reuse-atari] task=4 copy=1 src=1 score_mode=action best_action=11.218055248260498 best_latent=None best_score=11.218055248260498 new_copy=0 it=0 ce=1.049534e+01 keep_ratio=0.5000
+[tsn-improved-reuse-atari] task=4 copy=1 src=1 score_mode=action best_action=11.218055248260498 best_latent=None best_score=11.218055248260498 new_copy=0 it=19999 ce=2.623312e-01 keep_ratio=0.5000
+[tsn-improved-reuse-atari] after task 4: copy=1 occupied_ratio=0.5385 source_task=1 best_action=11.218055248260498 best_latent=None best_score=11.218055248260498 created_new_copy=False
+[eval] after task 5 on D_Breakout: 97.000 (target=114.0, eval_seed=0)
+[eval] after task 5 on A_Alien: 73.000 (target=86.0, eval_seed=1)
+[eval] after task 5 on B_Atlantis: 1512.000 (target=1556.0, eval_seed=2)
+[eval] after task 5 on C_Boxing: 90.000 (target=97.0, eval_seed=3)
+[eval] after task 5 on E_Centipede: 67.000 (target=135.0, eval_seed=4)
+
+=== Continual DT results (offline=True) ===
+[[ 9.700e+01  3.000e+00  1.800e+01 -1.600e+01  4.500e+01]
+ [ 9.700e+01  7.300e+01  4.800e+01 -1.000e+00  6.300e+01]
+ [ 9.700e+01  7.300e+01  1.512e+03 -8.000e+00  7.500e+01]
+ [ 9.700e+01  7.300e+01  1.512e+03  9.000e+01  8.400e+01]
+ [ 9.700e+01  7.300e+01  1.512e+03  9.000e+01  6.700e+01]]
+
+[artifacts] saved to: runs/atari__tsn_improved_reuse__specs_atari_cl_5_minari_like_breakout_first__dm128_L3_H4_K20_drop0.10__s0__rsm-action_athr12__r001__20260412-112656

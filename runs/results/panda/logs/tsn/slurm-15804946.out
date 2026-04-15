@@ -1,0 +1,250 @@
+x1002c4s3b0n0
+x1002c4s3b0n0
+x1002c4s3b0n0
+x1002c4s3b0n0
+x1002c4s3b0n0
+x1002c4s3b0n0
+x1002c4s3b0n0
+x1002c4s3b0n0
+ GCCcore/13.2.0 loaded.
+ zlib/1.2.13 loaded.
+ binutils/2.40 loaded.
+ bzip2/1.0.8 loaded.
+ ncurses/6.4 loaded.
+ libreadline/8.2 loaded.
+ Tcl/8.6.13 loaded.
+ SQLite/3.43.1 loaded.
+ XZ/5.4.4 loaded.
+ libffi/3.4.4 loaded.
+ OpenSSL/1.1 loaded.
+ Python/3.11.5 loaded.
+pybullet build time: Jan 27 2026 10:50:49
+[device] cuda
+
+=== Loading Panda tasks ===
+[TASK] PandaReach | env=PandaReachDense-v3 | data=/net/scratch/hscra/plgrid/plgdomin088/datasets/panda_expert/panda_reach_dense_1m_expert.pkl
+  use_time_feature=True
+  dataset obs shape: (3, 13), actions shape: (3, 3)
+  env obs_space: Dict('achieved_goal': Box(-10.0, 10.0, (3,), float32), 'desired_goal': Box(-10.0, 10.0, (3,), float32), 'observation': Box([-10. -10. -10. -10. -10. -10.   0.], [10. 10. 10. 10. 10. 10.  1.], (7,), float32)), act_space: Box(-1.0, 1.0, (3,), float32)
+  dataset episodes=370669 | return mean=-0.208 min=-0.633 max=-0.000
+[TASK] PandaPush | env=PandaPushDense-v3 | data=/net/scratch/hscra/plgrid/plgdomin088/datasets/panda_expert/panda_push_dense_1m_expert.pkl
+  use_time_feature=True
+  dataset obs shape: (6, 25), actions shape: (6, 3)
+  env obs_space: Dict('achieved_goal': Box(-10.0, 10.0, (3,), float32), 'desired_goal': Box(-10.0, 10.0, (3,), float32), 'observation': Box([-10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10.
+ -10. -10. -10. -10.   0.], [10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10.
+  1.], (19,), float32)), act_space: Box(-1.0, 1.0, (3,), float32)
+  dataset episodes=141668 | return mean=-0.937 min=-33.158 max=-0.001
+[TASK] PandaPickAndPlace | env=PandaPickAndPlaceDense-v3 | data=/net/scratch/hscra/plgrid/plgdomin088/datasets/panda_expert/panda_pick_and_place_dense_1m_expert.pkl
+  use_time_feature=True
+  dataset obs shape: (6, 26), actions shape: (6, 4)
+  env obs_space: Dict('achieved_goal': Box(-10.0, 10.0, (3,), float32), 'desired_goal': Box(-10.0, 10.0, (3,), float32), 'observation': Box([-10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10.
+ -10. -10. -10. -10. -10.   0.], [10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10.
+ 10.  1.], (20,), float32)), act_space: Box(-1.0, 1.0, (4,), float32)
+  dataset episodes=119353 | return mean=-1.298 min=-57.910 max=-0.001
+[lens] PandaReach: max_len=5 -> timestep_clip_max=4
+[lens] PandaPush: max_len=50 -> timestep_clip_max=49
+[lens] PandaPickAndPlace: max_len=50 -> timestep_clip_max=49
+
+[global dims] obs_dim=26 (per-task=[13, 25, 26]), act_dim=4 (per-task=[3, 3, 4])
+[target] PandaReach: target_return=-0.000320 (hardcoded)
+[target] PandaPush: target_return=-0.436000 (hardcoded)
+[target] PandaPickAndPlace: target_return=-0.001000 (hardcoded)
+DTBackbone config: DTConfig(n_layer=3, n_head=1, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=50, state_dim=128, act_discrete=False, act_vocab_size=1, act_dim=4, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 0.61M
+
+[run_dir] /net/home/plgrid/plgdomin088/runs/panda__tsn_origin_reuse__panda3_oldreuse_k033__dm128_L3_H1_K20_drop0.10__rsm-old_mem256_kl0.25_mcinf__r003__20260411-064841
+[tasks] ['PandaReach', 'PandaPush', 'PandaPickAndPlace']
+[model_signature] dm128_L3_H1_K20_drop0.10
+
+[Task 1/3] Train on PandaReach
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=0 bc=6.392593e-01 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=20000 bc=3.156641e-03 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=40000 bc=2.020334e-03 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=60000 bc=1.617951e-03 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=80000 bc=1.282102e-03 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=100000 bc=1.089999e-03 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=120000 bc=1.441342e-03 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=140000 bc=9.194452e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=160000 bc=1.002414e-03 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=180000 bc=9.304038e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=200000 bc=7.655917e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=220000 bc=8.695730e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=240000 bc=7.258446e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=260000 bc=8.283593e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=280000 bc=8.491302e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=300000 bc=6.365138e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=320000 bc=5.964718e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=340000 bc=5.938842e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=360000 bc=5.032221e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=380000 bc=5.211261e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=400000 bc=4.103729e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=420000 bc=5.782323e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=440000 bc=4.230223e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=460000 bc=5.177346e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=480000 bc=4.618156e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=500000 bc=5.088212e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=520000 bc=4.371958e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=540000 bc=5.076915e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=560000 bc=4.272683e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=580000 bc=4.397763e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=600000 bc=4.910259e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=620000 bc=4.206644e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=640000 bc=4.362408e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=660000 bc=3.124765e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=680000 bc=3.120065e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=700000 bc=4.072742e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=720000 bc=3.603762e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=740000 bc=3.328572e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=760000 bc=3.444020e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=780000 bc=4.469781e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=800000 bc=3.637933e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=820000 bc=3.118486e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=840000 bc=3.020483e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=860000 bc=4.047191e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=880000 bc=3.125871e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=900000 bc=3.377447e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=920000 bc=3.144490e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=940000 bc=3.033749e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=960000 bc=2.831294e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=980000 bc=2.989462e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=0 copy=0 src=None kl=None new_copy=0 it=999999 bc=3.433712e-04 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] after task 0: copy=0 occupied_ratio=0.3300 source_task=None best_kl=None
+[eval] after task 1 on PandaReach: -0.175 (target=-0.000320)
+[eval] after task 1 on PandaPush: -7.704 (target=-0.436000)
+[eval] after task 1 on PandaPickAndPlace: -10.296 (target=-0.001000)
+
+[Task 2/3] Train on PandaPush
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=0 bc=6.026497e-01 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=20000 bc=6.490769e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=40000 bc=6.053057e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=60000 bc=5.712771e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=80000 bc=3.772801e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=100000 bc=4.305662e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=120000 bc=3.182534e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=140000 bc=4.515215e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=160000 bc=5.310162e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=180000 bc=3.192378e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=200000 bc=3.460354e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=220000 bc=3.135610e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=240000 bc=4.951812e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=260000 bc=2.772766e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=280000 bc=2.424275e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=300000 bc=5.497991e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=320000 bc=3.769958e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=340000 bc=3.232409e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=360000 bc=3.562778e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=380000 bc=3.708866e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=400000 bc=3.293842e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=420000 bc=3.073143e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=440000 bc=3.302932e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=460000 bc=3.699650e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=480000 bc=3.621334e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=500000 bc=2.838238e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=520000 bc=3.397764e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=540000 bc=3.241418e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=560000 bc=3.257570e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=580000 bc=3.295274e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=600000 bc=3.122012e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=620000 bc=3.123190e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=640000 bc=3.272259e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=660000 bc=3.524894e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=680000 bc=3.238345e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=700000 bc=4.597602e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=720000 bc=3.196639e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=740000 bc=3.111778e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=760000 bc=2.790787e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=780000 bc=3.285974e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=800000 bc=2.395990e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=820000 bc=4.076959e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=840000 bc=2.931457e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=860000 bc=3.402945e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=880000 bc=2.363861e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=900000 bc=2.794522e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=920000 bc=3.272633e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=940000 bc=3.614320e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=960000 bc=3.570808e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=980000 bc=3.288522e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] task=1 copy=0 src=0 kl=0.15711325407028198 new_copy=0 it=999999 bc=3.315651e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-old-reuse-panda] after task 1: copy=0 occupied_ratio=0.4776 source_task=0 best_kl=0.15711325407028198
+[eval] after task 2 on PandaReach: -14.716 (target=-0.000320)
+[eval] after task 2 on PandaPush: -1.203 (target=-0.436000)
+[eval] after task 2 on PandaPickAndPlace: -10.679 (target=-0.001000)
+
+[Task 3/3] Train on PandaPickAndPlace
+DTBackbone config: DTConfig(n_layer=3, n_head=1, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=50, state_dim=128, act_discrete=False, act_vocab_size=1, act_dim=4, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 0.61M
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=0 bc=5.986719e-01 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=20000 bc=8.206524e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=40000 bc=5.836397e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=60000 bc=4.082844e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=80000 bc=4.615703e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=100000 bc=3.720992e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=120000 bc=4.069440e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=140000 bc=4.082450e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=160000 bc=3.925326e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=180000 bc=3.925043e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=200000 bc=3.336934e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=220000 bc=4.383519e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=240000 bc=4.213538e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=260000 bc=3.133734e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=280000 bc=3.504144e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=300000 bc=3.883325e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=320000 bc=3.963872e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=340000 bc=2.876627e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=360000 bc=2.860779e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=380000 bc=2.882621e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=400000 bc=3.768616e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=420000 bc=3.351962e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=440000 bc=3.443785e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=460000 bc=2.893614e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=480000 bc=3.420061e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=500000 bc=3.341450e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=520000 bc=3.228812e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=540000 bc=3.510885e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=560000 bc=2.854549e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=580000 bc=3.315271e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=600000 bc=3.200525e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=620000 bc=3.533101e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=640000 bc=3.266936e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=660000 bc=3.597911e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=680000 bc=3.367526e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=700000 bc=3.272072e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=720000 bc=3.297744e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=740000 bc=3.124845e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=760000 bc=3.193239e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=780000 bc=3.270523e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=800000 bc=3.312552e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=820000 bc=2.839568e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=840000 bc=3.202860e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=860000 bc=3.601305e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=880000 bc=3.223332e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=900000 bc=3.231971e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=920000 bc=3.575845e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=940000 bc=3.058730e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=960000 bc=3.296542e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=980000 bc=2.880390e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] task=2 copy=1 src=0 kl=0.5187362432479858 new_copy=1 it=999999 bc=2.856447e-02 keep_ratio=0.3300 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-old-reuse-panda] after task 2: copy=1 occupied_ratio=0.3300 source_task=0 best_kl=0.5187362432479858
+[eval] after task 3 on PandaReach: -14.716 (target=-0.000320)
+[eval] after task 3 on PandaPush: -1.203 (target=-0.436000)
+[eval] after task 3 on PandaPickAndPlace: -1.433 (target=-0.001000)
+
+Done. Saved Panda CL results to: /net/home/plgrid/plgdomin088/runs/panda__tsn_origin_reuse__panda3_oldreuse_k033__dm128_L3_H1_K20_drop0.10__rsm-old_mem256_kl0.25_mcinf__r003__20260411-064841
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886

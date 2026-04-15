@@ -1,0 +1,248 @@
+x1002c5s6b0n0
+x1002c5s6b0n0
+x1002c5s6b0n0
+x1002c5s6b0n0
+x1002c5s6b0n0
+x1002c5s6b0n0
+x1002c5s6b0n0
+x1002c5s6b0n0
+ GCCcore/13.2.0 loaded.
+ zlib/1.2.13 loaded.
+ binutils/2.40 loaded.
+ bzip2/1.0.8 loaded.
+ ncurses/6.4 loaded.
+ libreadline/8.2 loaded.
+ Tcl/8.6.13 loaded.
+ SQLite/3.43.1 loaded.
+ XZ/5.4.4 loaded.
+ libffi/3.4.4 loaded.
+ OpenSSL/1.1 loaded.
+ Python/3.11.5 loaded.
+pybullet build time: Jan 27 2026 10:50:49
+[device] cuda
+
+=== Loading Panda tasks ===
+[TASK] PandaReach | env=PandaReachDense-v3 | data=/net/scratch/hscra/plgrid/plgdomin088/datasets/panda_expert/panda_reach_dense_1m_expert.pkl
+  use_time_feature=True
+  dataset obs shape: (3, 13), actions shape: (3, 3)
+  env obs_space: Dict('achieved_goal': Box(-10.0, 10.0, (3,), float32), 'desired_goal': Box(-10.0, 10.0, (3,), float32), 'observation': Box([-10. -10. -10. -10. -10. -10.   0.], [10. 10. 10. 10. 10. 10.  1.], (7,), float32)), act_space: Box(-1.0, 1.0, (3,), float32)
+  dataset episodes=370669 | return mean=-0.208 min=-0.633 max=-0.000
+[TASK] PandaPush | env=PandaPushDense-v3 | data=/net/scratch/hscra/plgrid/plgdomin088/datasets/panda_expert/panda_push_dense_1m_expert.pkl
+  use_time_feature=True
+  dataset obs shape: (6, 25), actions shape: (6, 3)
+  env obs_space: Dict('achieved_goal': Box(-10.0, 10.0, (3,), float32), 'desired_goal': Box(-10.0, 10.0, (3,), float32), 'observation': Box([-10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10.
+ -10. -10. -10. -10.   0.], [10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10.
+  1.], (19,), float32)), act_space: Box(-1.0, 1.0, (3,), float32)
+  dataset episodes=141668 | return mean=-0.937 min=-33.158 max=-0.001
+[TASK] PandaPickAndPlace | env=PandaPickAndPlaceDense-v3 | data=/net/scratch/hscra/plgrid/plgdomin088/datasets/panda_expert/panda_pick_and_place_dense_1m_expert.pkl
+  use_time_feature=True
+  dataset obs shape: (6, 26), actions shape: (6, 4)
+  env obs_space: Dict('achieved_goal': Box(-10.0, 10.0, (3,), float32), 'desired_goal': Box(-10.0, 10.0, (3,), float32), 'observation': Box([-10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10. -10.
+ -10. -10. -10. -10. -10.   0.], [10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10. 10.
+ 10.  1.], (20,), float32)), act_space: Box(-1.0, 1.0, (4,), float32)
+  dataset episodes=119353 | return mean=-1.298 min=-57.910 max=-0.001
+[lens] PandaReach: max_len=5 -> timestep_clip_max=4
+[lens] PandaPush: max_len=50 -> timestep_clip_max=49
+[lens] PandaPickAndPlace: max_len=50 -> timestep_clip_max=49
+
+[global dims] obs_dim=26 (per-task=[13, 25, 26]), act_dim=4 (per-task=[3, 3, 4])
+[target] PandaReach: target_return=-0.000320 (hardcoded)
+[target] PandaPush: target_return=-0.436000 (hardcoded)
+[target] PandaPickAndPlace: target_return=-0.001000 (hardcoded)
+DTBackbone config: DTConfig(n_layer=3, n_head=1, n_embd=128, dropout=0.1, bias=False, K=20, max_ep_len=50, state_dim=128, act_discrete=False, act_vocab_size=1, act_dim=4, act_tanh=False, tanh_embeddings=False)
+DTBackbone parameters: 0.61M
+
+[run_dir] /net/home/plgrid/plgdomin088/runs/panda__tsn__panda3_tsn_k033_nofreeze_noquant__dm128_L3_H1_K20_drop0.10__r004__20260411-072857
+[tasks] ['PandaReach', 'PandaPush', 'PandaPickAndPlace']
+[model_signature] dm128_L3_H1_K20_drop0.10
+
+[Task 1/3] Train on PandaReach
+[tsn-panda] task=0 it=0 bc=5.989703e-01 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=20000 bc=2.704942e-03 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=40000 bc=1.928665e-03 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=60000 bc=1.530294e-03 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=80000 bc=1.433509e-03 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=100000 bc=1.194451e-03 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=120000 bc=1.031716e-03 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=140000 bc=8.228378e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=160000 bc=8.429738e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=180000 bc=9.330038e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=200000 bc=8.255589e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=220000 bc=8.594937e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=240000 bc=8.511624e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=260000 bc=7.741343e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=280000 bc=7.762130e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=300000 bc=6.852073e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=320000 bc=6.545520e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=340000 bc=6.510573e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=360000 bc=5.818676e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=380000 bc=5.385615e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=400000 bc=5.400108e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=420000 bc=5.093259e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=440000 bc=4.743846e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=460000 bc=4.707362e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=480000 bc=4.613950e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=500000 bc=4.897099e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=520000 bc=3.848735e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=540000 bc=4.959292e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=560000 bc=5.118627e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=580000 bc=4.775953e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=600000 bc=5.502987e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=620000 bc=4.076527e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=640000 bc=4.064404e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=660000 bc=3.930091e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=680000 bc=3.940956e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=700000 bc=4.291701e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=720000 bc=4.693308e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=740000 bc=3.385137e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=760000 bc=3.962472e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=780000 bc=3.947616e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=800000 bc=3.705804e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=820000 bc=3.180801e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=840000 bc=3.439047e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=860000 bc=3.717322e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=880000 bc=3.812580e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=900000 bc=3.168169e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=920000 bc=3.292208e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=940000 bc=3.387264e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=960000 bc=2.989174e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=980000 bc=3.228571e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=0 it=999999 bc=3.131055e-04 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] after task 0: occupied_ratio=0.3300
+[eval] after task 1 on PandaReach: -0.176 (target=-0.000320)
+[eval] after task 1 on PandaPush: -7.704 (target=-0.436000)
+[eval] after task 1 on PandaPickAndPlace: -10.513 (target=-0.001000)
+
+[Task 2/3] Train on PandaPush
+[tsn-panda] task=1 it=0 bc=5.883165e-01 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=20000 bc=5.445098e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=40000 bc=4.240131e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=60000 bc=4.597741e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=80000 bc=2.480607e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=100000 bc=2.760095e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=120000 bc=2.368835e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=140000 bc=3.113012e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=160000 bc=3.430558e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=180000 bc=2.597352e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=200000 bc=2.264782e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=220000 bc=2.471169e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=240000 bc=3.334384e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=260000 bc=1.825029e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=280000 bc=1.907804e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=300000 bc=3.003299e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=320000 bc=2.453928e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=340000 bc=2.171710e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=360000 bc=2.477309e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=380000 bc=2.608860e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=400000 bc=1.951232e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=420000 bc=2.309497e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=440000 bc=2.274274e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=460000 bc=2.514222e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=480000 bc=1.630386e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=500000 bc=2.209073e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=520000 bc=2.346951e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=540000 bc=2.063765e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=560000 bc=2.235550e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=580000 bc=2.335008e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=600000 bc=2.104760e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=620000 bc=2.236545e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=640000 bc=2.311755e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=660000 bc=2.758010e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=680000 bc=2.330554e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=700000 bc=2.582782e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=720000 bc=2.230021e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=740000 bc=2.402380e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=760000 bc=2.182170e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=780000 bc=2.148280e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=800000 bc=1.602632e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=820000 bc=2.324140e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=840000 bc=1.919063e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=860000 bc=2.428305e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=880000 bc=1.655527e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=900000 bc=1.929999e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=920000 bc=2.213684e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=940000 bc=1.946950e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=960000 bc=2.597319e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=980000 bc=2.435420e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] task=1 it=999999 bc=2.568681e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 0]
+[tsn-panda] after task 1: occupied_ratio=0.5511
+[eval] after task 2 on PandaReach: -0.205 (target=-0.000320)
+[eval] after task 2 on PandaPush: -0.935 (target=-0.436000)
+[eval] after task 2 on PandaPickAndPlace: -10.296 (target=-0.001000)
+
+[Task 3/3] Train on PandaPickAndPlace
+[tsn-panda] task=2 it=0 bc=6.004831e-01 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=20000 bc=9.629896e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=40000 bc=8.236905e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=60000 bc=5.878392e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=80000 bc=6.974556e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=100000 bc=5.221062e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=120000 bc=6.539501e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=140000 bc=6.673682e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=160000 bc=6.615636e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=180000 bc=7.088896e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=200000 bc=5.603909e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=220000 bc=7.772490e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=240000 bc=6.947601e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=260000 bc=4.807580e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=280000 bc=6.078449e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=300000 bc=6.545358e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=320000 bc=6.488659e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=340000 bc=4.685267e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=360000 bc=5.156828e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=380000 bc=5.114203e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=400000 bc=6.512322e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=420000 bc=5.735429e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=440000 bc=6.202444e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=460000 bc=5.349934e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=480000 bc=5.504032e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=500000 bc=5.963029e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=520000 bc=6.261799e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=540000 bc=6.216244e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=560000 bc=4.940109e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=580000 bc=5.370365e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=600000 bc=4.940772e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=620000 bc=6.153864e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=640000 bc=5.730976e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=660000 bc=6.639972e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=680000 bc=5.792241e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=700000 bc=5.895028e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=720000 bc=5.635820e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=740000 bc=5.212801e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=760000 bc=6.019253e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=780000 bc=6.319210e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=800000 bc=5.783235e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=820000 bc=5.378195e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=840000 bc=6.091402e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=860000 bc=5.957371e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=880000 bc=5.519027e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=900000 bc=6.222165e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=920000 bc=6.102448e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=940000 bc=5.873232e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=960000 bc=6.658895e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=980000 bc=4.868654e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] task=2 it=999999 bc=4.744756e-02 keep_ratio=0.33 reuse=0 quant=0 active_action_dim_mask=[1, 1, 1, 1]
+[tsn-panda] after task 2: occupied_ratio=0.6992
+[eval] after task 3 on PandaReach: -0.235 (target=-0.000320)
+[eval] after task 3 on PandaPush: -2.589 (target=-0.436000)
+[eval] after task 3 on PandaPickAndPlace: -1.427 (target=-0.001000)
+
+Done. Saved Panda CL results to: /net/home/plgrid/plgdomin088/runs/panda__tsn__panda3_tsn_k033_nofreeze_noquant__dm128_L3_H1_K20_drop0.10__r004__20260411-072857
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886
+argv[0]=--background_color_red=0.8745098114013672
+argv[1]=--background_color_green=0.21176470816135406
+argv[2]=--background_color_blue=0.1764705926179886

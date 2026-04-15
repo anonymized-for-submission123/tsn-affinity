@@ -1,0 +1,31 @@
+{
+  "per_step": [
+    {
+      "step": 1,
+      "task_name": "PandaReach",
+      "acc_i": -0.1876506507396698,
+      "bwt_i": 0.0,
+      "forgetting_i": 0.0,
+      "diag": -0.1876506507396698,
+      "mean_seen": -0.1876506507396698
+    },
+    {
+      "step": 2,
+      "task_name": "PandaPush",
+      "acc_i": -0.5716946721076965,
+      "bwt_i": 0.0,
+      "forgetting_i": 0.0,
+      "diag": -0.9557386636734009,
+      "mean_seen": -0.5716946721076965
+    },
+    {
+      "step": 3,
+      "task_name": "PandaPickAndPlace",
+      "acc_i": -0.8827366828918457,
+      "bwt_i": -6.836652755737305e-05,
+      "forgetting_i": 6.836652755737305e-05,
+      "diag": -1.5046840906143188,
+      "mean_seen": -0.8827366828918457
+    }
+  ]
+}

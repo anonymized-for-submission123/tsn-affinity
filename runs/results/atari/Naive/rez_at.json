@@ -1,0 +1,11 @@
+{
+  "metrics": {
+    "ACC": 23.799999237060547,
+    "BWT": -416.75,
+    "Forgetting": 416.75
+  },
+  "strategy": "naive",
+  "model_signature": "dm128_L3_H4_K20_drop0.10",
+  "tsn_reuse_score_mode": null,
+  "tsn_reuse_signature": null
+}

@@ -1,0 +1,8 @@
+{
+  "step": 4,
+  "task_name": "D_Breakout",
+  "n_trajectories": 10,
+  "traj_file": null,
+  "offline": true,
+  "dataset_root": "/net/tscratch/people/plgdomin088/datasets/atari_expert"
+}

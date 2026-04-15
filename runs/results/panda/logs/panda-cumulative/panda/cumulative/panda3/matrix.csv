@@ -1,0 +1,4 @@
+after_task \ on_task,PandaReach,PandaPush,PandaPickAndPlace
+PandaReach,-0.189165,-7.790419,-9.575535
+PandaPush,-0.187856,-0.980198,-9.579604
+PandaPickAndPlace,-0.188804,-1.119770,-1.314251
